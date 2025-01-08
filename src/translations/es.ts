@@ -63,22 +63,42 @@ export const es = {
     skincare: {
       title: "Cuidado de la Piel",
       description: "Soluciones premium para el cuidado de la piel, incluyendo hidratantes, sueros, limpiadores y tratamientos.",
-      items: ["Hidratantes y Cremas", "Sueros y Tratamientos", "Limpiadores y Tónicos", "Protectores Solares"]
+      items: [
+        "Hidratantes y Cremas",
+        "Sueros y Tratamientos",
+        "Limpiadores y Tónicos",
+        "Protectores Solares"
+      ]
     },
     haircare: {
       title: "Cuidado del Cabello",
       description: "Productos profesionales para todo tipo de cabello y necesidades.",
-      items: ["Champús y Acondicionadores", "Mascarillas Capilares", "Aceites y Sueros", "Productos de Peinado"]
+      items: [
+        "Champús y Acondicionadores",
+        "Mascarillas Capilares",
+        "Aceites y Sueros",
+        "Productos de Peinado"
+      ]
     },
     wellness: {
       title: "Bienestar y Autocuidado",
       description: "Soluciones holísticas de bienestar para mente, cuerpo y alma.",
-      items: ["Cuidado Corporal", "Aceites Esenciales", "Suplementos", "Ayudas para Relajación"]
+      items: [
+        "Cuidado Corporal",
+        "Aceites Esenciales",
+        "Suplementos",
+        "Ayudas para Relajación"
+      ]
     },
     makeup: {
       title: "Maquillaje y Belleza",
       description: "Productos esenciales de belleza para un look natural y perfecto.",
-      items: ["BB y CC Creams", "Primers", "Cuidado Labial", "Cuidado de Ojos"]
+      items: [
+        "BB y CC Creams",
+        "Primers",
+        "Cuidado Labial",
+        "Cuidado de Ojos"
+      ]
     }
   },
   footer: {

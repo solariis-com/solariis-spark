@@ -83,7 +83,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-gray-200">
           <p className="text-center text-text-light">
-            © {new Date().getFullYear()} {t.footer.company}. All rights reserved.
+            © 2025 Solariis Venezuela C.A. All rights reserved.
           </p>
         </div>
       </div>

@@ -77,28 +77,28 @@ const About = () => {
           <h2 className="font-heading text-h2 text-text mb-8">What We Do</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up">
-              <Leaf className="w-12 h-12 text-primary mb-4" />
+              <Leaf className="w-12 h-12 text-primary mb-4" strokeWidth={1.5} />
               <h3 className="font-heading text-h4 text-text mb-3">Brand Representation & Market Expansion</h3>
               <p className="text-body text-text-light">
                 Acting as official representatives for international beauty and wellness brands.
               </p>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <Network className="w-12 h-12 text-primary mb-4" />
+              <Network className="w-12 h-12 text-primary mb-4" strokeWidth={1.5} />
               <h3 className="font-heading text-h4 text-text mb-3">Import & Distribution</h3>
               <p className="text-body text-text-light">
                 Bringing high-quality products to trusted retail chains, pharmacies, and e-commerce platforms.
               </p>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.3s" }}>
-              <BarChart3 className="w-12 h-12 text-primary mb-4" />
+              <BarChart3 className="w-12 h-12 text-primary mb-4" strokeWidth={1.5} />
               <h3 className="font-heading text-h4 text-text mb-3">Marketing & Brand Awareness</h3>
               <p className="text-body text-text-light">
                 Developing localized strategies, digital marketing, and retail activations to position brands effectively.
               </p>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.4s" }}>
-              <ShieldCheck className="w-12 h-12 text-primary mb-4" />
+              <ShieldCheck className="w-12 h-12 text-primary mb-4" strokeWidth={1.5} />
               <h3 className="font-heading text-h4 text-text mb-3">Regulatory & Compliance Support</h3>
               <p className="text-body text-text-light">
                 Handling import logistics, legal registrations, and local market compliance for seamless brand entry.

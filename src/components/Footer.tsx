@@ -79,7 +79,7 @@ const Footer = () => {
           <div className="flex flex-col items-center space-y-4 mb-4">
             <img src={LogoSvg} alt="Solariis Logo" className="w-32 h-auto" />
             <p className="text-text-light">
-              LIVE RADIANTLY;
+              Live Radiantly;
             </p>
           </div>
           <p className="text-center text-text-light">

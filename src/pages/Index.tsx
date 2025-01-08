@@ -3,6 +3,39 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const Index = () => {
+  const categories = [
+    {
+      title: "Skincare",
+      description: "Premium skincare solutions including moisturizers, serums, cleansers, and treatments.",
+      items: ["Moisturizers & Creams", "Serums & Treatments", "Cleansers & Toners", "Sunscreens"]
+    },
+    {
+      title: "Haircare",
+      description: "Professional haircare products for all hair types and concerns.",
+      items: ["Shampoos & Conditioners", "Hair Masks", "Oils & Serums", "Styling Products"]
+    },
+    {
+      title: "Wellness & Self-Care",
+      description: "Holistic wellness solutions for mind, body, and soul.",
+      items: ["Body Care", "Essential Oils", "Supplements", "Relaxation Aids"]
+    },
+    {
+      title: "Makeup & Beauty",
+      description: "Essential beauty products for a flawless, natural look.",
+      items: ["BB & CC Creams", "Primers", "Lip Care", "Eye Care"]
+    },
+    {
+      title: "Beauty Tools",
+      description: "Innovative beauty tools and accessories for enhanced skincare routines.",
+      items: ["Facial Rollers", "LED Devices", "Styling Tools", "Applicators"]
+    },
+    {
+      title: "Eco-Friendly Beauty",
+      description: "Sustainable and environmentally conscious beauty solutions.",
+      items: ["Organic Products", "Zero-Waste", "Cruelty-Free", "Clean Beauty"]
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -79,24 +112,27 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Coming Soon Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary-light">
+      {/* Categories Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-text mb-8">Featured Products</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
+          <h2 className="text-3xl font-bold text-text mb-8">Our Product Categories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {categories.map((category, index) => (
               <div
-                key={item}
+                key={index}
                 className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up"
-                style={{ animationDelay: `${(item - 1) * 0.2}s` }}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="aspect-square bg-accent rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-text-light">Coming Soon</span>
-                </div>
-                <h3 className="text-xl font-semibold text-text mb-2">Product {item}</h3>
-                <p className="text-text-light">
-                  Premium health and beauty products coming to our portfolio soon.
-                </p>
+                <h3 className="text-xl font-semibold text-text mb-3">{category.title}</h3>
+                <p className="text-text-light mb-4 text-sm">{category.description}</p>
+                <ul className="space-y-2 text-sm text-text-light">
+                  {category.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-center">
+                      <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

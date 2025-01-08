@@ -97,7 +97,7 @@ const Categories = () => {
               {/* Cosmetics & Makeup */}
               <Card className="bg-white/80 backdrop-blur">
                 <CardHeader>
-                  <CardTitle className="text-h3">💄 Cosmetics & Makeup</CardTitle>
+                  <CardTitle className="text-h3">Cosmetics & Makeup</CardTitle>
                   <CardDescription className="text-body">
                     Innovative formulas for radiant beauty.
                   </CardDescription>

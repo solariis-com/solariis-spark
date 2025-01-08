@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
+import { Resend } from 'npm:resend'
 
 const RESEND = Deno.env.get('RESEND')
 
@@ -21,6 +22,8 @@ serve(async (req) => {
     const formData = await req.json()
     console.log('Received form data:', formData)
 
+    const resend = new Resend(RESEND)
+
     // Format the email HTML
     const emailHtml = `
       <h2>New Contact Form Submission</h2>
@@ -31,29 +34,20 @@ serve(async (req) => {
       <p>${formData.message}</p>
     `
 
-    // Send email using Resend
     console.log('Sending email via Resend...')
-    const res = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${RESEND}`,
-      },
-      body: JSON.stringify({
-        from: 'onboarding@resend.dev', // Using Resend's testing email
-        to: ['advertti@gmail.com'], // During testing, only send to verified email
-        subject: `New Contact Form: ${formData.subject}`,
-        html: emailHtml,
-        reply_to: formData.email,
-      }),
+    const data = await resend.emails.send({
+      from: 'onboarding@resend.dev',
+      to: 'advertti@gmail.com',
+      subject: `New Contact Form: ${formData.subject}`,
+      html: emailHtml,
+      reply_to: formData.email,
     })
 
-    const data = await res.json()
     console.log('Resend API response:', data)
 
     return new Response(JSON.stringify(data), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      status: res.ok ? 200 : 400,
+      status: 200,
     })
   } catch (error) {
     console.error('Error in send-contact-email function:', error)

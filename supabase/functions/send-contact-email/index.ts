@@ -7,13 +7,11 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
 
-interface ContactSubmission {
-  id: string
+interface ContactFormData {
   name: string
   email: string
   subject: string
   message: string
-  created_at: string
 }
 
 serve(async (req) => {
@@ -23,21 +21,27 @@ serve(async (req) => {
   }
 
   try {
-    const { record } = await req.json()
-    const submission = record as ContactSubmission
+    if (!RESEND_API_KEY) {
+      throw new Error('RESEND_API_KEY is not set')
+    }
+
+    const formData: ContactFormData = await req.json()
+    
+    console.log('Received form data:', formData)
+
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      throw new Error('Missing required fields')
+    }
 
     // Format the email HTML
     const emailHtml = `
       <h2>New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${submission.name}</p>
-      <p><strong>Email:</strong> ${submission.email}</p>
-      <p><strong>Subject:</strong> ${submission.subject}</p>
+      <p><strong>Name:</strong> ${formData.name}</p>
+      <p><strong>Email:</strong> ${formData.email}</p>
+      <p><strong>Subject:</strong> ${formData.subject}</p>
       <p><strong>Message:</strong></p>
-      <p>${submission.message}</p>
-      <p><em>Submitted at: ${new Date(submission.created_at).toLocaleString()}</em></p>
+      <p>${formData.message}</p>
     `
-
-    console.log('Sending email for submission:', submission.id)
 
     // Send email using Resend
     const res = await fetch('https://api.resend.com/emails', {
@@ -49,7 +53,7 @@ serve(async (req) => {
       body: JSON.stringify({
         from: 'Solariis Contact Form <contact@solariis.com>',
         to: ['info@solariis.com'],
-        subject: `New Contact Form Submission: ${submission.subject}`,
+        subject: `New Contact Form Submission: ${formData.subject}`,
         html: emailHtml,
       }),
     })
@@ -69,9 +73,12 @@ serve(async (req) => {
     })
   } catch (error) {
     console.error('Error in send-contact-email function:', error)
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      status: 500,
-    })
+    return new Response(
+      JSON.stringify({ error: error.message }), 
+      { 
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        status: 500,
+      }
+    )
   }
 })

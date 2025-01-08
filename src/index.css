@@ -94,12 +94,6 @@
   p {
     @apply text-body mb-4;
   }
-
-  .text-body-lg {
-    @apply text-body-lg;
-  }
-
-  .text-body-sm {
-    @apply text-body-sm;
-  }
 }
+
+/* Instead of using @apply for these utility classes, we'll use them directly from Tailwind */

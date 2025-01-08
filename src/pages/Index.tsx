@@ -74,13 +74,13 @@ const Index = () => {
             <div className="space-x-6">
               <Link
                 to="/contact"
-                className="font-cta inline-block bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-button font-semibold shadow-lg hover:shadow-primary/30"
+                className="inline-block bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 text-button font-semibold shadow-lg hover:shadow-primary/30"
               >
                 Partner with Us
               </Link>
               <Link
                 to="/about"
-                className="font-cta inline-block bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-button font-semibold"
+                className="inline-block bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 text-button font-semibold"
               >
                 Learn More
               </Link>

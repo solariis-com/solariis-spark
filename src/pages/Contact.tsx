@@ -19,7 +19,7 @@ export default function Contact() {
         business: "Business Inquiries",
         businessDesc: "For inquiries related to brand partnerships, distribution opportunities, or retail collaborations, please contact us at:",
         support: "Customer Support",
-        supportDesc: "If you are a retailer, distributor, or customer needing assistance, we're here to help.",
+        supportDesc: "If you are a retailer, distribuidor, or customer needing assistance, we're here to help.",
         social: "Follow Us on Social Media",
         socialDesc: "Stay connected with Solariis for the latest updates, new brand launches, and industry trends:",
         form: "Contact Form",
@@ -62,8 +62,8 @@ export default function Contact() {
         </div>
         <div className="container relative z-10 text-accent">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-display mb-6">{translations[language].hero.title}</h1>
-            <p className="text-body-lg mb-8">{translations[language].hero.subtitle}</p>
+            <h1 className="text-4xl font-bold mb-6">{translations[language].hero.title}</h1>
+            <p className="text-xl mb-8">{translations[language].hero.subtitle}</p>
             <Button size="lg" className="text-lg">
               {translations[language].hero.cta}
             </Button>
@@ -74,7 +74,7 @@ export default function Contact() {
       <div className="container max-w-7xl mx-auto px-4 py-16 space-y-16">
         {/* How to Reach Us */}
         <section>
-          <h2>{translations[language].sections.reach}</h2>
+          <h2 className="text-3xl font-bold mb-4">{translations[language].sections.reach}</h2>
           <p className="mb-8">{translations[language].sections.reachDesc}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex items-start gap-3">
@@ -111,7 +111,7 @@ export default function Contact() {
         {/* Business Inquiries & Support */}
         <div className="grid md:grid-cols-2 gap-12">
           <section>
-            <h2>{translations[language].sections.business}</h2>
+            <h2 className="text-2xl font-bold mb-4">{translations[language].sections.business}</h2>
             <p className="mb-4">{translations[language].sections.businessDesc}</p>
             <p className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-primary" />
@@ -119,7 +119,7 @@ export default function Contact() {
             </p>
           </section>
           <section>
-            <h2>{translations[language].sections.support}</h2>
+            <h2 className="text-2xl font-bold mb-4">{translations[language].sections.support}</h2>
             <p className="mb-4">{translations[language].sections.supportDesc}</p>
             <p className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-primary" />
@@ -130,7 +130,7 @@ export default function Contact() {
 
         {/* Social Media */}
         <section>
-          <h2>{translations[language].sections.social}</h2>
+          <h2 className="text-2xl font-bold mb-4">{translations[language].sections.social}</h2>
           <p className="mb-8">{translations[language].sections.socialDesc}</p>
           <div className="flex gap-6">
             <a href="https://instagram.com/solariis" className="text-text hover:text-primary transition-colors">
@@ -148,7 +148,7 @@ export default function Contact() {
         {/* Contact Form */}
         <section>
           <div className="max-w-xl mx-auto">
-            <h2 className="text-center">{translations[language].sections.form}</h2>
+            <h2 className="text-2xl font-bold text-center">{translations[language].sections.form}</h2>
             <p className="text-center mb-8">{translations[language].sections.formDesc}</p>
             <ContactForm />
             <p className="text-center mt-8 text-lg font-medium">

@@ -1,9 +1,8 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/translations";
 import { ContactForm } from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Mail, Phone, MapPin, Globe } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
   const { language } = useLanguage();
@@ -54,13 +53,6 @@ const Contact = () => {
                   <div>
                     <h4 className="font-heading text-h4 mb-2">{t.contact.reachUs.email.title}</h4>
                     <p>{t.contact.reachUs.email.value}</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <Globe className="w-6 h-6 text-primary mt-1" />
-                  <div>
-                    <h4 className="font-heading text-h4 mb-2">{t.contact.reachUs.website.title}</h4>
-                    <p>{t.contact.reachUs.website.value}</p>
                   </div>
                 </div>
               </div>

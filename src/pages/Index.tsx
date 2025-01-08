@@ -44,7 +44,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen font-body">
       <Navbar />
       
       {/* Hero Section */}
@@ -64,7 +64,7 @@ const Index = () => {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-up space-y-8">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Elevating Health & Beauty
               <span className="block text-primary">to New Heights</span>
             </h1>
@@ -74,13 +74,13 @@ const Index = () => {
             <div className="space-x-6">
               <Link
                 to="/contact"
-                className="inline-block bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg font-semibold shadow-lg hover:shadow-primary/30"
+                className="font-cta inline-block bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg font-semibold shadow-lg hover:shadow-primary/30"
               >
                 Partner with Us
               </Link>
               <Link
                 to="/about"
-                className="inline-block bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg font-semibold"
+                className="font-cta inline-block bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg font-semibold"
               >
                 Learn More
               </Link>
@@ -94,7 +94,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up">
-              <h3 className="text-xl font-semibold text-text mb-4">For Brands</h3>
+              <h3 className="font-heading text-xl font-semibold text-text mb-4">For Brands</h3>
               <p className="text-text-light mb-4">
                 We help exceptional health and beauty brands reach their full potential in new markets.
               </p>
@@ -106,7 +106,7 @@ const Index = () => {
               </Link>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <h3 className="text-xl font-semibold text-text mb-4">For Distributors</h3>
+              <h3 className="font-heading text-xl font-semibold text-text mb-4">For Distributors</h3>
               <p className="text-text-light mb-4">
                 Access premium health and beauty products from vetted, innovative brands.
               </p>
@@ -118,7 +118,7 @@ const Index = () => {
               </Link>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.4s" }}>
-              <h3 className="text-xl font-semibold text-text mb-4">Our Promise</h3>
+              <h3 className="font-heading text-xl font-semibold text-text mb-4">Our Promise</h3>
               <p className="text-text-light mb-4">
                 Quality, transparency, and excellence in every partnership we build.
               </p>
@@ -136,7 +136,7 @@ const Index = () => {
       {/* Categories Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-text mb-8">Our Product Categories</h2>
+          <h2 className="font-heading text-3xl font-bold text-text mb-8">Our Product Categories</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => (
               <div
@@ -153,7 +153,7 @@ const Index = () => {
                     />
                   </AspectRatio>
                 </div>
-                <h3 className="text-xl font-semibold text-text mb-3">{category.title}</h3>
+                <h3 className="font-heading text-xl font-semibold text-text mb-3">{category.title}</h3>
                 <p className="text-text-light mb-4 text-sm">{category.description}</p>
                 <ul className="space-y-2 text-sm text-text-light">
                   {category.items.map((item, itemIndex) => (

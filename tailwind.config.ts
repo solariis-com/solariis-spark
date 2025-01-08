@@ -18,6 +18,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        heading: ['"Julius Sans One"', 'sans-serif'],
+        body: ['"Rethink Sans"', 'sans-serif'],
+        cta: ['Poppins', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

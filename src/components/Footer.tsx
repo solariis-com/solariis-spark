@@ -57,7 +57,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2 text-text-light">
                 <MapPin size={16} />
-                <span>123 Business Ave, Suite 100</span>
+                <span>Nueva Esparta, Campiña, T-5, Venezuela</span>
               </li>
             </ul>
           </div>

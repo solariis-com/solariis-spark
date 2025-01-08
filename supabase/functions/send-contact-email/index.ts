@@ -40,8 +40,8 @@ serve(async (req) => {
         'Authorization': `Bearer ${RESEND}`,
       },
       body: JSON.stringify({
-        from: 'advertti@gmail.com', // Using your verified email
-        to: ['advertti@gmail.com'], // Sending to your verified email
+        from: 'onboarding@resend.dev', // Using Resend's testing email
+        to: ['advertti@gmail.com'], // During testing, only send to verified email
         subject: `New Contact Form: ${formData.subject}`,
         html: emailHtml,
         reply_to: formData.email,

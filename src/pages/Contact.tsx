@@ -13,16 +13,16 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="pt-24">
-        {/* Hero Section */}
-        <div className="relative h-[40vh] mb-16">
+        {/* Hero Section - Updated with responsive classes */}
+        <div className="relative h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh] mb-16">
           <div className="absolute inset-0 bg-neutral-brown/30 z-10" />
           <img
             src="/lovable-uploads/bc578a58-dea8-4c91-9ac8-423c5d6b3ca4.png"
             alt="Contact Hero"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-white px-4">
-            <h1 className="text-center mb-4">{t.contact.hero.title}</h1>
+          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-white px-4 md:px-6 lg:px-8">
+            <h1 className="text-center mb-4 max-w-4xl">{t.contact.hero.title}</h1>
             <p className="text-body text-center max-w-2xl mb-8">
               {t.contact.hero.subtitle}
             </p>

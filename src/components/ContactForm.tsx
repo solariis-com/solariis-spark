@@ -55,24 +55,22 @@ export function ContactForm() {
       console.log('Starting form submission with values:', values)
       
       // Insert into contact_submissions table
-      const { data: submissionData, error: submissionError } = await supabase
+      const { error: submissionError } = await supabase
         .from('contact_submissions')
-        .insert([
-          {
-            name: values.name,
-            email: values.email,
-            subject: values.subject,
-            message: values.message,
-          }
-        ])
-        .select()
+        .insert([{
+          name: values.name,
+          email: values.email,
+          subject: values.subject,
+          message: values.message,
+        }])
 
-      console.log('Database submission result:', { submissionData, submissionError })
-      if (submissionError) throw submissionError
+      if (submissionError) {
+        console.error('Database submission error:', submissionError)
+        throw submissionError
+      }
 
-      // Only if the submission was successful, trigger email sending
-      console.log('Calling send-contact-email function...')
-      const { data: emailData, error: emailError } = await supabase.functions.invoke('send-contact-email', {
+      // If database submission was successful, send email
+      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
         body: { 
           name: values.name,
           email: values.email,
@@ -81,13 +79,19 @@ export function ContactForm() {
         },
       })
 
-      console.log('Email function response:', { emailData, emailError })
-      if (emailError) throw emailError
-
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
-      })
+      if (emailError) {
+        console.error('Email sending error:', emailError)
+        // Don't throw here, as the form submission was successful
+        toast({
+          title: "Message saved but email notification failed",
+          description: "We received your message but couldn't send the email notification. We'll still get back to you soon.",
+        })
+      } else {
+        toast({
+          title: "Message sent successfully!",
+          description: "We'll get back to you as soon as possible.",
+        })
+      }
       
       form.reset()
     } catch (error) {

@@ -1,6 +1,6 @@
 "use client"
 
-import Cal from "@calcom/embed-react";
+import { InlineWidget } from "react-calendly";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
@@ -126,12 +126,11 @@ export function ContactForm() {
       </TabsContent>
       <TabsContent value="calendar">
         <div className="h-[600px]">
-          <Cal 
-            calLink="solariis/solariis"
-            style={{
-              width: "100%",
-              height: "100%",
-              overflow: "hidden"
+          <InlineWidget 
+            url="https://calendly.com/solariis-info/30min"
+            styles={{
+              height: '100%',
+              width: '100%',
             }}
           />
         </div>

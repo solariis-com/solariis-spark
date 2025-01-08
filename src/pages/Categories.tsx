@@ -63,7 +63,7 @@ const Categories = () => {
               {/* Health & Wellness */}
               <Card className="bg-white/80 backdrop-blur">
                 <CardHeader>
-                  <CardTitle className="text-h3">🌿 Health & Wellness</CardTitle>
+                  <CardTitle className="text-h3">Health & Wellness</CardTitle>
                   <CardDescription className="text-body">
                     Prioritizing well-being with trusted health products.
                   </CardDescription>

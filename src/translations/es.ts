@@ -7,8 +7,8 @@ export const es = {
     partnerWithUs: "Asóciate con Nosotros"
   },
   hero: {
-    title: "Salud y Belleza Premium",
-    subtitle: "Distribución",
+    title: "Conectando Marcas Internacionales de Belleza",
+    subtitle: "con Consumidores Venezolanos",
     description: "Conectamos marcas internacionales con el mercado venezolano, ofreciendo productos de salud y belleza de alta calidad.",
     cta: {
       partner: "Asóciate con Nosotros",

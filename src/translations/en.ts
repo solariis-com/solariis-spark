@@ -7,8 +7,8 @@ export const en = {
     partnerWithUs: "Partner With Us"
   },
   hero: {
-    title: "Premium Health & Beauty",
-    subtitle: "Distribution",
+    title: "Connecting International Beauty Brands",
+    subtitle: "with Venezuelan Consumers",
     description: "We connect international brands with the Venezuelan market, offering high-quality health and beauty products.",
     cta: {
       partner: "Partner with Us",

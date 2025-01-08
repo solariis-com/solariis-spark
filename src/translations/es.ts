@@ -4,14 +4,14 @@ export const es = {
     about: "Nosotros",
     products: "Categorías",
     contact: "Contacto",
-    partnerWithUs: "Asóciese con Nosotros"
+    partnerWithUs: "Asóciate con Nosotros"
   },
   hero: {
     title: "Salud y Belleza Premium",
     subtitle: "Distribución",
     description: "Conectamos marcas internacionales con el mercado venezolano, ofreciendo productos de salud y belleza de alta calidad.",
     cta: {
-      partner: "Asóciese con Nosotros",
+      partner: "Asóciate con Nosotros",
       learnMore: "Más Información"
     }
   },

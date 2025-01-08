@@ -82,6 +82,7 @@ const Footer = () => {
               </button>
             </form>
           </div>
+
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-200">

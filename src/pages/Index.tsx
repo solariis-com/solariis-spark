@@ -45,7 +45,7 @@ const Index = () => {
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center h-full">
-          <div className="animate-fade-up space-y-8 text-center max-w-4xl py-16">
+          <div className="animate-fade-up space-y-8 text-center max-w-4xl my-auto">
             <h1 className="font-body text-display text-white mb-6 leading-tight">
               {t.hero.title}
               <span className="block text-primary">{t.hero.subtitle}</span>

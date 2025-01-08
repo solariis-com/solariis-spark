@@ -41,6 +41,9 @@ const Categories = () => {
         <section id="categories" className="py-20 bg-neutral-beige">
           <div className="container mx-auto px-4">
             <h2 className="text-center mb-16">Our Product Categories</h2>
+            <p className="text-body text-center max-w-3xl mx-auto mb-12">
+              We specialize in importing and distributing high-quality brands across the following categories:
+            </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
               {/* Beauty & Skincare */}
@@ -48,14 +51,23 @@ const Categories = () => {
                 <CardHeader>
                   <CardTitle className="text-h3">Beauty & Skincare</CardTitle>
                   <CardDescription className="text-body">
-                    Enhance natural beauty with top-tier skincare solutions.
+                    Enhance natural beauty with top-tier skincare solutions designed to nourish, protect, and rejuvenate the skin.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-body">
-                    <li>• Facial creams, serums & treatments</li>
-                    <li>• Cleansers & toners</li>
-                    <li>• Masks & exfoliants</li>
+                  <ul className="space-y-4 text-body">
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Hydration & Anti-Aging:</span> Formulated with advanced ingredients like hyaluronic acid, retinol, and peptides to deeply hydrate, improve elasticity, and reduce fine lines.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Deep Cleansing & Purifying:</span> Clay masks, exfoliators, and gentle cleansers that help remove impurities, minimize pores, and maintain balanced skin.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Brightening & Even-Tone Solutions:</span> Skincare infused with vitamin C, niacinamide, and botanical extracts to promote a radiant complexion and even skin tone.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Sun Protection:</span> Lightweight, high-SPF sun creams offering broad-spectrum UV protection, keeping skin shielded from sun damage while maintaining hydration.
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
@@ -65,14 +77,23 @@ const Categories = () => {
                 <CardHeader>
                   <CardTitle className="text-h3">Health & Wellness</CardTitle>
                   <CardDescription className="text-body">
-                    Prioritizing well-being with trusted health products.
+                    Prioritizing well-being with trusted health products that enhance daily life and overall vitality.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-body">
-                    <li>• Nutritional supplements & vitamins</li>
-                    <li>• Herbal & natural remedies</li>
-                    <li>• Self-care & relaxation products</li>
+                  <ul className="space-y-4 text-body">
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Nutritional Supplements:</span> High-quality vitamins, minerals, and herbal supplements to support immune health, energy, and overall well-being.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Stress Relief & Relaxation:</span> Aromatherapy, essential oils, and self-care products designed to promote relaxation, reduce stress, and improve sleep quality.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Detox & Gut Health:</span> Herbal blends, fiber-rich supplements, and probiotics to improve digestion, aid metabolism, and support internal cleansing.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Muscle Recovery & Joint Health:</span> Products designed for post-workout recovery, joint flexibility, and overall mobility support.
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
@@ -82,14 +103,23 @@ const Categories = () => {
                 <CardHeader>
                   <CardTitle className="text-h3">Personal Care</CardTitle>
                   <CardDescription className="text-body">
-                    Everyday essentials for a healthier lifestyle.
+                    Everyday essentials for a healthier and more confident lifestyle.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-body">
-                    <li>• Hair care (shampoos, conditioners, treatments)</li>
-                    <li>• Body care (lotions, scrubs, deodorants)</li>
-                    <li>• Oral hygiene & personal hygiene</li>
+                  <ul className="space-y-4 text-body">
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Hair Care & Treatments:</span> Nourishing shampoos, conditioners, and intensive treatments infused with collagen, keratin, and ceramides to restore strength and shine.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Body Care & Hydration:</span> Luxurious lotions, body scrubs, and moisturizing treatments enriched with shea butter, aloe vera, and botanical extracts to keep skin soft and smooth.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Oral Hygiene & Personal Care:</span> Premium toothpaste, mouthwashes, and hygiene essentials to ensure a fresh, clean, and healthy routine.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Frizz Control & Styling:</span> Leave-in treatments, styling sprays, and curl enhancers to maintain smooth, manageable hair with lasting hold.
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
@@ -99,14 +129,23 @@ const Categories = () => {
                 <CardHeader>
                   <CardTitle className="text-h3">Cosmetics & Makeup</CardTitle>
                   <CardDescription className="text-body">
-                    Innovative formulas for radiant beauty.
+                    Innovative formulas designed to enhance natural beauty with a flawless finish.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-body">
-                    <li>• Foundations, concealers & powders</li>
-                    <li>• Lipsticks, glosses & eye makeup</li>
-                    <li>• Makeup removers & setting sprays</li>
+                  <ul className="space-y-4 text-body">
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Long-Lasting Foundations & Concealers:</span> Lightweight, buildable coverage that evens out skin tone while keeping skin hydrated.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Lip Care & Color:</span> Hydrating lip balms, vibrant lipsticks, and high-shine glosses for long-lasting color and nourishment.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Eye Makeup & Definition:</span> High-pigment eyeshadows, waterproof mascaras, and precise eyeliners for an expressive, bold look.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Makeup Setting & Skincare Fusion:</span> Setting sprays, primers, and hybrid makeup products infused with skincare benefits to enhance and protect the skin.
+                    </li>
                   </ul>
                 </CardContent>
               </Card>

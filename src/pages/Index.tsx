@@ -42,6 +42,7 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{
@@ -49,12 +50,14 @@ const Index = () => {
             backgroundPosition: 'center 20%'
           }}
         >
+          {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
         </div>
 
+        {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-up space-y-8">
-            <h1 className="font-heading text-display text-white mb-6 leading-tight">
+            <h1 className="font-heading text-display font-bold text-white mb-6 leading-tight">
               {t.hero.title}
               <span className="block text-primary">{t.hero.subtitle}</span>
             </h1>
@@ -84,50 +87,37 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up">
-              <h3 className="font-heading text-h3 text-text mb-4">{t.features.forBrands.title}</h3>
-</lov-replace>
-
-<lov-search>
-              <h4 className="font-heading text-h4 text-text mb-3">Partnership Details</h4>
-</lov-search>
-<lov-replace>
+              <h3 className="font-heading text-h3 font-semibold text-text mb-4">{t.features.forBrands.title}</h3>
               <p className="text-body text-text-light mb-4">
                 {t.features.forBrands.description}
               </p>
               <Link
                 to="/contact"
-                className="text-text hover:text-text-light transition-colors text-button"
+                className="text-text hover:text-text-light transition-colors"
               >
                 {t.features.forBrands.link} →
               </Link>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <h3 className="font-heading text-h3 text-text mb-4">{t.features.forDistributors.title}</h3>
-              <h4 className="font-heading text-h4 text-text mb-3">Partnership Details</h4>
-              <p className="text-body text-text-light mb-4">
+              <h3 className="font-heading text-xl font-semibold text-text mb-4">{t.features.forDistributors.title}</h3>
+              <p className="text-text-light mb-4">
                 {t.features.forDistributors.description}
               </p>
               <Link
                 to="/contact"
-                className="text-text hover:text-text-light transition-colors text-button"
+                className="text-text hover:text-text-light transition-colors"
               >
                 {t.features.forDistributors.link} →
               </Link>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.4s" }}>
-              <h3 className="font-heading text-h3 text-text mb-4">{t.features.promise.title}</h3>
-</lov-replace>
-
-<lov-search>
-                <h4 className="font-heading text-h4 text-text mb-2">Featured Products</h4>
-</lov-search>
-<lov-replace>
-              <p className="text-body text-text-light mb-4">
+              <h3 className="font-heading text-xl font-semibold text-text mb-4">{t.features.promise.title}</h3>
+              <p className="text-text-light mb-4">
                 {t.features.promise.description}
               </p>
               <Link
                 to="/about"
-                className="text-text hover:text-text-light transition-colors text-button"
+                className="text-text hover:text-text-light transition-colors"
               >
                 {t.features.promise.link} →
               </Link>
@@ -139,7 +129,7 @@ const Index = () => {
       {/* Categories Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="font-heading text-h2 text-text mb-8">{t.categories.title}</h2>
+          <h2 className="font-heading text-h2 font-bold text-text mb-8">{t.categories.title}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => (
               <div
@@ -156,10 +146,9 @@ const Index = () => {
                     />
                   </AspectRatio>
                 </div>
-                <h3 className="font-heading text-h3 text-text mb-3">{t.categories[category.key].title}</h3>
-                <h4 className="font-heading text-h4 text-text mb-2">Featured Products</h4>
-                <p className="text-body text-text-light mb-4">{t.categories[category.key].description}</p>
-                <ul className="space-y-2 text-body text-text-light">
+                <h3 className="font-heading text-h3 font-semibold text-text mb-3">{t.categories[category.key].title}</h3>
+                <p className="text-body-sm text-text-light mb-4">{t.categories[category.key].description}</p>
+                <ul className="space-y-2 text-body-sm text-text-light">
                   {t.categories[category.key].items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-center">
                       <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>

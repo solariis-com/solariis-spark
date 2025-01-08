@@ -128,7 +128,7 @@ export function ContactForm() {
         <div className="h-[600px] relative">
           {/* Replace 'your-cal-link' with your actual Cal.com link */}
           <Cal 
-            calLink="your-cal-link"
+            calLink="solariis/solariis"
             style={{
               width: "100%",
               height: "100%",

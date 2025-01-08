@@ -12,10 +12,9 @@ const Navbar = () => {
     <nav className="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex-shrink-0 flex items-center space-x-2">
-            <img src={logo} alt="Solariis Logo" className="h-8 w-8" />
-            <Link to="/" className="text-2xl font-heading font-bold text-text">
-              Solariis
+          <div className="flex-shrink-0 flex items-center">
+            <Link to="/">
+              <img src={logo} alt="Solariis Logo" className="h-8 w-8" />
             </Link>
           </div>
 

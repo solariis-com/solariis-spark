@@ -1,13 +1,19 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
 
 const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY')
-const SUPABASE_URL = Deno.env.get('SUPABASE_URL')
-const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+}
+
+interface ContactSubmission {
+  id: string
+  name: string
+  email: string
+  subject: string
+  message: string
+  created_at: string
 }
 
 serve(async (req) => {
@@ -17,24 +23,21 @@ serve(async (req) => {
   }
 
   try {
-    const supabase = createClient(
-      SUPABASE_URL!,
-      SUPABASE_SERVICE_ROLE_KEY!
-    )
-
-    // Get the contact submission data from the request
     const { record } = await req.json()
+    const submission = record as ContactSubmission
 
     // Format the email HTML
     const emailHtml = `
       <h2>New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${record.name}</p>
-      <p><strong>Email:</strong> ${record.email}</p>
-      <p><strong>Subject:</strong> ${record.subject}</p>
+      <p><strong>Name:</strong> ${submission.name}</p>
+      <p><strong>Email:</strong> ${submission.email}</p>
+      <p><strong>Subject:</strong> ${submission.subject}</p>
       <p><strong>Message:</strong></p>
-      <p>${record.message}</p>
-      <p><em>Submitted at: ${new Date(record.created_at).toLocaleString()}</em></p>
+      <p>${submission.message}</p>
+      <p><em>Submitted at: ${new Date(submission.created_at).toLocaleString()}</em></p>
     `
+
+    console.log('Sending email for submission:', submission.id)
 
     // Send email using Resend
     const res = await fetch('https://api.resend.com/emails', {
@@ -46,23 +49,26 @@ serve(async (req) => {
       body: JSON.stringify({
         from: 'Solariis Contact Form <contact@solariis.com>',
         to: ['info@solariis.com'],
-        subject: `New Contact Form Submission: ${record.subject}`,
+        subject: `New Contact Form Submission: ${submission.subject}`,
         html: emailHtml,
       }),
     })
 
-    const data = await res.json()
-    
     if (!res.ok) {
-      throw new Error(data.message)
+      const error = await res.text()
+      console.error('Resend API error:', error)
+      throw new Error(`Failed to send email: ${error}`)
     }
+
+    const data = await res.json()
+    console.log('Email sent successfully:', data)
 
     return new Response(JSON.stringify(data), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       status: 200,
     })
   } catch (error) {
-    console.error('Error processing request:', error)
+    console.error('Error in send-contact-email function:', error)
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       status: 500,

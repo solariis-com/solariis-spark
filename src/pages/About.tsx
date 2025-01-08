@@ -19,8 +19,8 @@ const About = () => {
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{
-            backgroundImage: 'url("/lovable-uploads/6b386d38-d8d5-4210-9fbd-42225b30cbd0.png")',
-            backgroundPosition: 'center 20%'
+            backgroundImage: 'url("/lovable-uploads/5995a1dc-0bdc-4dae-aa18-c2ed847a1ff6.png")',
+            backgroundPosition: 'center 30%'
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
@@ -46,7 +46,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Who We Are */}
         <section id="learn-more" className="mb-20 animate-fade-up">

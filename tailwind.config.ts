@@ -57,8 +57,8 @@ export default {
         },
       },
       fontSize: {
-        'display': ['clamp(2.5rem, 6vw, 4rem)', { lineHeight: '1.1' }],
-        'h1': ['clamp(2rem, 5vw, 3rem)', { lineHeight: '1.2' }],
+        'display': ['clamp(2.5rem, 6vw, 4rem)', { lineHeight: '1.1', fontWeight: '500' }],
+        'h1': ['clamp(2rem, 5vw, 3rem)', { lineHeight: '1.2', fontWeight: '500' }],
         'h2': ['clamp(1.75rem, 4vw, 2.5rem)', { lineHeight: '1.2' }],
         'h3': ['clamp(1.5rem, 3vw, 2.25rem)', { lineHeight: '1.3' }],
         'h4': ['clamp(1.25rem, 2.5vw, 2rem)', { lineHeight: '1.4' }],

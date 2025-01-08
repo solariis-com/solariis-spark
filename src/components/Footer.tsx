@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-text">{t.footer.company}</h3>
             <p className="text-text-light">
-              {t.footer.description}
+              LIVE RADIANTLY
             </p>
           </div>
 

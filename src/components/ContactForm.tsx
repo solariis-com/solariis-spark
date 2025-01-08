@@ -52,9 +52,10 @@ export function ContactForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true)
+      console.log('Starting form submission with values:', values)
       
       // Insert into contact_submissions table
-      const { error: submissionError } = await supabase
+      const { data: submissionData, error: submissionError } = await supabase
         .from('contact_submissions')
         .insert([
           {
@@ -64,11 +65,14 @@ export function ContactForm() {
             message: values.message,
           }
         ])
+        .select()
 
+      console.log('Database submission result:', { submissionData, submissionError })
       if (submissionError) throw submissionError
 
       // Only if the submission was successful, trigger email sending
-      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+      console.log('Calling send-contact-email function...')
+      const { data: emailData, error: emailError } = await supabase.functions.invoke('send-contact-email', {
         body: { 
           name: values.name,
           email: values.email,
@@ -77,6 +81,7 @@ export function ContactForm() {
         },
       })
 
+      console.log('Email function response:', { emailData, emailError })
       if (emailError) throw emailError
 
       toast({

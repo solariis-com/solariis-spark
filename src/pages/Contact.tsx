@@ -39,7 +39,7 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <h4 className="font-heading text-h4 mb-2">{t.contact.reachUs.address.title}</h4>
-                    <p>{t.contact.reachUs.address.value}</p>
+                    <p>Nueva Esparta, Campiña, T-5, Venezuela</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">

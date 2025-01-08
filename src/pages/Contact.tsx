@@ -3,7 +3,7 @@ import { translations } from "@/translations";
 import { ContactForm } from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Mail, Phone, MapPin, Globe, Instagram, Facebook, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Globe } from "lucide-react";
 
 const Contact = () => {
   const { language } = useLanguage();
@@ -62,22 +62,6 @@ const Contact = () => {
                     <h4 className="font-heading text-h4 mb-2">{t.contact.reachUs.website.title}</h4>
                     <p>{t.contact.reachUs.website.value}</p>
                   </div>
-                </div>
-              </div>
-
-              {/* Social Media */}
-              <div className="mt-12">
-                <h3 className="mb-6">{t.contact.social.title}</h3>
-                <div className="flex space-x-6">
-                  <a href="#" className="text-text-light hover:text-primary transition-colors">
-                    <Instagram className="w-6 h-6" />
-                  </a>
-                  <a href="#" className="text-text-light hover:text-primary transition-colors">
-                    <Facebook className="w-6 h-6" />
-                  </a>
-                  <a href="#" className="text-text-light hover:text-primary transition-colors">
-                    <Linkedin className="w-6 h-6" />
-                  </a>
                 </div>
               </div>
             </div>

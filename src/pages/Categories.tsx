@@ -12,8 +12,8 @@ const Categories = () => {
 
   const categories = [
     {
-      title: "Beauty & Skincare",
-      description: "Enhance natural beauty with top-tier skincare solutions designed to nourish, protect, and rejuvenate the skin.",
+      title: t.categories.skincare.title,
+      description: t.categories.skincare.description,
       imageSrc: "/lovable-uploads/7acb4e9d-c852-4bb5-afa9-9e91be10a7c0.png",
       features: [
         {
@@ -35,8 +35,8 @@ const Categories = () => {
       ]
     },
     {
-      title: "Health & Wellness",
-      description: "Prioritizing well-being with trusted health products that enhance daily life and overall vitality.",
+      title: t.categories.wellness.title,
+      description: t.categories.wellness.description,
       imageSrc: "/lovable-uploads/432c0ff8-3f4f-4199-a36a-8d63f851bd8a.png",
       features: [
         {
@@ -58,8 +58,8 @@ const Categories = () => {
       ]
     },
     {
-      title: "Personal Care",
-      description: "Everyday essentials for a healthier and more confident lifestyle.",
+      title: t.categories.haircare.title,
+      description: t.categories.haircare.description,
       imageSrc: "/lovable-uploads/98af4ef5-abb3-49be-b3b8-f7d69d917f30.png",
       features: [
         {
@@ -81,8 +81,8 @@ const Categories = () => {
       ]
     },
     {
-      title: "Cosmetics & Makeup",
-      description: "Innovative formulas designed to enhance natural beauty with a flawless finish.",
+      title: t.categories.makeup.title,
+      description: t.categories.makeup.description,
       imageSrc: "/lovable-uploads/bc578a58-dea8-4c91-9ac8-423c5d6b3ca4.png",
       features: [
         {
@@ -120,13 +120,12 @@ const Categories = () => {
           }}
         />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h1 className="text-display mb-4">Discover Our Product Categories</h1>
+          <h1 className="text-display mb-4">{t.categories.title}</h1>
           <p className="text-body-lg max-w-3xl mx-auto mb-8">
-            At Solariis, we bring premium health, wellness, and beauty products to the market, 
-            carefully curated to meet the needs of consumers and retailers.
+            {t.categories.description}
           </p>
           <Button asChild size="lg" className="animate-fade-up">
-            <a href="#categories">Explore our categories below!</a>
+            <a href="#categories">{t.categories.exploreButton}</a>
           </Button>
         </div>
       </section>
@@ -134,9 +133,9 @@ const Categories = () => {
       {/* Categories Section */}
       <section id="categories" className="py-20 bg-neutral-beige">
         <div className="container mx-auto px-4">
-          <h2 className="text-center mb-16">Our Product Categories</h2>
+          <h2 className="text-center mb-16">{t.categories.sectionTitle}</h2>
           <p className="text-body text-center max-w-3xl mx-auto mb-12">
-            We specialize in importing and distributing high-quality brands across the following categories:
+            {t.categories.sectionDescription}
           </p>
           
           <div className="grid grid-cols-1 gap-16 mb-20">
@@ -153,14 +152,9 @@ const Categories = () => {
       {/* Why Choose Us Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-center mb-16">Why Choose Solariis?</h2>
+          <h2 className="text-center mb-16">{t.categories.whyChooseUs.title}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              "Ensure Authenticity & Quality – We bring internationally recognized, high-standard products.",
-              "Support Retailers & Distributors – Providing a structured supply chain with reliable distribution.",
-              "Comply with Local Regulations – Ensuring all products meet safety and regulatory requirements.",
-              "Expand Brand Reach – Helping international brands establish a strong presence in Venezuela."
-            ].map((item, index) => (
+            {t.categories.whyChooseUs.items.map((item, index) => (
               <div key={index} className="flex items-start gap-4 p-6 rounded-lg bg-accent hover:bg-accent-dark transition-colors">
                 <p className="text-body">{item}</p>
               </div>
@@ -172,15 +166,14 @@ const Categories = () => {
       {/* Partner With Us Section */}
       <section className="py-20 bg-primary/10">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-6">Partner With Us</h2>
+          <h2 className="mb-6">{t.categories.partnerWithUs.title}</h2>
           <p className="text-body-lg max-w-2xl mx-auto mb-8">
-            If you are a retailer, distributor, or brand looking to enter the market, 
-            we are here to collaborate. Explore our product categories and discover how we can work together.
+            {t.categories.partnerWithUs.description}
           </p>
           <div className="space-y-4">
-            <p className="text-body-lg font-semibold">📩 Contact us today to learn more!</p>
+            <p className="text-body-lg font-semibold">{t.categories.partnerWithUs.contact}</p>
             <Button asChild size="lg" variant="default">
-              <Link to="/contact">Get in Touch 🚀</Link>
+              <Link to="/contact">{t.categories.partnerWithUs.button}</Link>
             </Button>
           </div>
         </div>

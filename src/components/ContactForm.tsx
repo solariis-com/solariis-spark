@@ -1,6 +1,5 @@
 "use client"
 
-import Cal from "@calcom/embed-react";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
@@ -17,6 +16,9 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { InlineWidget } from "react-calendly"
+import { createClient } from '@supabase/supabase-js'
+import { useState } from "react"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -33,8 +35,14 @@ const formSchema = z.object({
   }),
 })
 
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+)
+
 export function ContactForm() {
   const { toast } = useToast()
+  const [isSubmitting, setIsSubmitting] = useState(false)
   
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -46,13 +54,39 @@ export function ContactForm() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
-    toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you as soon as possible.",
-    })
-    form.reset()
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      setIsSubmitting(true)
+      
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([
+          {
+            name: values.name,
+            email: values.email,
+            subject: values.subject,
+            message: values.message,
+          }
+        ])
+
+      if (error) throw error
+
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you as soon as possible.",
+      })
+      
+      form.reset()
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      toast({
+        title: "Error sending message",
+        description: "Please try again later.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -120,18 +154,19 @@ export function ContactForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full">Send Message</Button>
+            <Button type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </Button>
           </form>
         </Form>
       </TabsContent>
       <TabsContent value="calendar">
         <div className="h-[600px]">
-          <Cal 
-            calLink="solariis/solariis"
-            style={{
-              width: "100%",
-              height: "100%",
-              overflow: "hidden"
+          <InlineWidget 
+            url="https://calendly.com/solariis-info/30min"
+            styles={{
+              height: '100%',
+              width: '100%'
             }}
           />
         </div>

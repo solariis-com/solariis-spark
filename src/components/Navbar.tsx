@@ -1,10 +1,18 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
+import { useLanguage } from "../contexts/LanguageContext";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -33,6 +41,22 @@ const Navbar = () => {
               Contact
             </Link>
             {/* Partner with Us button temporarily hidden */}
+            
+            {/* Language Selector */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center space-x-1 text-text-light hover:text-text transition-colors">
+                <Globe size={20} />
+                <span className="ml-1">{language.toUpperCase()}</span>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem onClick={() => setLanguage('en')}>
+                  English
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('es')}>
+                  Español
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           {/* Mobile menu button */}
@@ -79,6 +103,28 @@ const Navbar = () => {
                 Contact
               </Link>
               {/* Partner with Us button temporarily hidden */}
+              
+              {/* Mobile Language Selector */}
+              <div className="px-3 py-2">
+                <div className="flex items-center space-x-4">
+                  <button
+                    onClick={() => setLanguage('en')}
+                    className={`text-text-light hover:text-text transition-colors ${
+                      language === 'en' ? 'font-semibold text-text' : ''
+                    }`}
+                  >
+                    English
+                  </button>
+                  <button
+                    onClick={() => setLanguage('es')}
+                    className={`text-text-light hover:text-text transition-colors ${
+                      language === 'es' ? 'font-semibold text-text' : ''
+                    }`}
+                  >
+                    Español
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         )}

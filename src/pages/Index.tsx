@@ -64,23 +64,23 @@ const Index = () => {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-up space-y-8">
-            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="font-heading text-display font-bold text-white mb-6 leading-tight">
               Elevating Beauty Standards
               <span className="block text-primary">One Brand at a Time</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-body-lg text-white/90 mb-8 max-w-2xl mx-auto">
               Beauty is more than a product—it's an experience. At Solariis, we curate and distribute premium brands that redefine industry standards, making radiance accessible to all.
             </p>
             <div className="space-x-6">
               <Link
                 to="/contact"
-                className="font-cta inline-block bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg font-semibold shadow-lg hover:shadow-primary/30"
+                className="font-cta inline-block bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-button font-semibold shadow-lg hover:shadow-primary/30"
               >
                 Partner with Us
               </Link>
               <Link
                 to="/about"
-                className="font-cta inline-block bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg font-semibold"
+                className="font-cta inline-block bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-button font-semibold"
               >
                 Learn More
               </Link>
@@ -94,8 +94,8 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up">
-              <h3 className="font-heading text-xl font-semibold text-text mb-4">For Brands</h3>
-              <p className="text-text-light mb-4">
+              <h3 className="font-heading text-h3 font-semibold text-text mb-4">For Brands</h3>
+              <p className="text-body text-text-light mb-4">
                 We help exceptional health and beauty brands reach their full potential in new markets.
               </p>
               <Link
@@ -136,7 +136,7 @@ const Index = () => {
       {/* Categories Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="font-heading text-3xl font-bold text-text mb-8">Our Product Categories</h2>
+          <h2 className="font-heading text-h2 font-bold text-text mb-8">Our Product Categories</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => (
               <div
@@ -153,9 +153,9 @@ const Index = () => {
                     />
                   </AspectRatio>
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-text mb-3">{category.title}</h3>
-                <p className="text-text-light mb-4 text-sm">{category.description}</p>
-                <ul className="space-y-2 text-sm text-text-light">
+                <h3 className="font-heading text-h3 font-semibold text-text mb-3">{category.title}</h3>
+                <p className="text-body-sm text-text-light mb-4">{category.description}</p>
+                <ul className="space-y-2 text-body-sm text-text-light">
                   {category.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-center">
                       <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>

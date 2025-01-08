@@ -57,14 +57,17 @@ export default {
         },
       },
       fontSize: {
-        // Responsive typography using clamp
-        'h1': ['clamp(2rem, 5vw, 3.5rem)', { lineHeight: '1.2' }],
-        'h2': ['clamp(1.75rem, 4vw, 3rem)', { lineHeight: '1.2' }],
-        'h3': ['clamp(1.5rem, 3vw, 2.5rem)', { lineHeight: '1.3' }],
-        'h4': ['clamp(1.25rem, 2.5vw, 2rem)', { lineHeight: '1.4' }],
-        'body-lg': ['1.125rem', { lineHeight: '1.75' }],
-        'body': ['1rem', { lineHeight: '1.5' }],
-        'body-sm': ['0.875rem', { lineHeight: '1.4' }],
+        'display': ['clamp(2.5rem, 6vw, 4rem)', { lineHeight: '1.1' }], // 40px - 64px
+        'h1': ['clamp(2rem, 5vw, 3rem)', { lineHeight: '1.2' }], // 32px - 48px
+        'h2': ['clamp(1.75rem, 4vw, 2.5rem)', { lineHeight: '1.2' }], // 28px - 40px
+        'h3': ['clamp(1.5rem, 3vw, 2.25rem)', { lineHeight: '1.3' }], // 24px - 36px
+        'h4': ['clamp(1.25rem, 2.5vw, 2rem)', { lineHeight: '1.4' }], // 20px - 32px
+        'body-lg': ['clamp(1.125rem, 2vw, 1.75rem)', { lineHeight: '1.6' }], // 18px - 28px
+        'body': ['clamp(1rem, 1.5vw, 1.5rem)', { lineHeight: '1.5' }], // 16px - 24px
+        'body-sm': ['clamp(0.875rem, 1.25vw, 1.25rem)', { lineHeight: '1.4' }], // 14px - 20px
+        'button': ['1rem', { lineHeight: '1.5', letterSpacing: '0.05em', textTransform: 'uppercase' }], // 16px
+        'caption': ['0.75rem', { lineHeight: '1.4' }], // 12px
+        'input': ['1rem', { lineHeight: '1.5' }], // 16px
       },
       keyframes: {
         "fade-up": {

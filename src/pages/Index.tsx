@@ -21,7 +21,7 @@ const Index = () => {
       title: "Wellness & Self-Care",
       description: "Holistic wellness solutions for mind, body, and soul.",
       items: ["Body Care", "Essential Oils", "Supplements", "Relaxation Aids"],
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+      image: "/lovable-uploads/432c0ff8-3f4f-4199-a36a-8d63f851bd8a.png"
     },
     {
       title: "Makeup & Beauty",

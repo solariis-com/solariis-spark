@@ -86,7 +86,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <p className="text-center text-text-light">
+          <p className="text-center text-text-light text-body-sm">
             © 2025 Solariis Venezuela C.A. All rights reserved.
           </p>
         </div>

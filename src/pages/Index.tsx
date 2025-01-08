@@ -85,6 +85,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up">
               <h3 className="font-heading text-h3 text-text mb-4">{t.features.forBrands.title}</h3>
+              <h4 className="font-heading text-h4 text-text mb-3">Key Benefits</h4>
               <p className="text-body text-text-light mb-4">
                 {t.features.forBrands.description}
               </p>
@@ -97,6 +98,7 @@ const Index = () => {
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.2s" }}>
               <h3 className="font-heading text-h3 text-text mb-4">{t.features.forDistributors.title}</h3>
+              <h4 className="font-heading text-h4 text-text mb-3">Partnership Details</h4>
               <p className="text-body text-text-light mb-4">
                 {t.features.forDistributors.description}
               </p>
@@ -109,6 +111,7 @@ const Index = () => {
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.4s" }}>
               <h3 className="font-heading text-h3 text-text mb-4">{t.features.promise.title}</h3>
+              <h4 className="font-heading text-h4 text-text mb-3">Our Commitment</h4>
               <p className="text-body text-text-light mb-4">
                 {t.features.promise.description}
               </p>
@@ -144,6 +147,7 @@ const Index = () => {
                   </AspectRatio>
                 </div>
                 <h3 className="font-heading text-h3 text-text mb-3">{t.categories[category.key].title}</h3>
+                <h4 className="font-heading text-h4 text-text mb-2">Featured Products</h4>
                 <p className="text-body text-text-light mb-4">{t.categories[category.key].description}</p>
                 <ul className="space-y-2 text-body text-text-light">
                   {t.categories[category.key].items.map((item, itemIndex) => (

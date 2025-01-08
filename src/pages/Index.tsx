@@ -7,32 +7,38 @@ const Index = () => {
     {
       title: "Skincare",
       description: "Premium skincare solutions including moisturizers, serums, cleansers, and treatments.",
-      items: ["Moisturizers & Creams", "Serums & Treatments", "Cleansers & Toners", "Sunscreens"]
+      items: ["Moisturizers & Creams", "Serums & Treatments", "Cleansers & Toners", "Sunscreens"],
+      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9"
     },
     {
       title: "Haircare",
       description: "Professional haircare products for all hair types and concerns.",
-      items: ["Shampoos & Conditioners", "Hair Masks", "Oils & Serums", "Styling Products"]
+      items: ["Shampoos & Conditioners", "Hair Masks", "Oils & Serums", "Styling Products"],
+      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07"
     },
     {
       title: "Wellness & Self-Care",
       description: "Holistic wellness solutions for mind, body, and soul.",
-      items: ["Body Care", "Essential Oils", "Supplements", "Relaxation Aids"]
+      items: ["Body Care", "Essential Oils", "Supplements", "Relaxation Aids"],
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
     },
     {
       title: "Makeup & Beauty",
       description: "Essential beauty products for a flawless, natural look.",
-      items: ["BB & CC Creams", "Primers", "Lip Care", "Eye Care"]
+      items: ["BB & CC Creams", "Primers", "Lip Care", "Eye Care"],
+      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901"
     },
     {
       title: "Beauty Tools",
       description: "Innovative beauty tools and accessories for enhanced skincare routines.",
-      items: ["Facial Rollers", "LED Devices", "Styling Tools", "Applicators"]
+      items: ["Facial Rollers", "LED Devices", "Styling Tools", "Applicators"],
+      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b"
     },
     {
       title: "Eco-Friendly Beauty",
       description: "Sustainable and environmentally conscious beauty solutions.",
-      items: ["Organic Products", "Zero-Waste", "Cruelty-Free", "Clean Beauty"]
+      items: ["Organic Products", "Zero-Waste", "Cruelty-Free", "Clean Beauty"],
+      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b"
     }
   ];
 
@@ -123,6 +129,13 @@ const Index = () => {
                 className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
+                <div className="aspect-w-16 aspect-h-9 mb-4 overflow-hidden rounded-lg">
+                  <img 
+                    src={`${category.image}?auto=format&fit=crop&w=800&q=80`}
+                    alt={category.title}
+                    className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <h3 className="text-xl font-semibold text-text mb-3">{category.title}</h3>
                 <p className="text-text-light mb-4 text-sm">{category.description}</p>
                 <ul className="space-y-2 text-sm text-text-light">

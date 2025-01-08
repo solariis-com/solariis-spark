@@ -46,7 +46,7 @@ const Categories = () => {
               {/* Beauty & Skincare */}
               <Card className="bg-white/80 backdrop-blur">
                 <CardHeader>
-                  <CardTitle className="text-h3">🧖‍♀️ Beauty & Skincare</CardTitle>
+                  <CardTitle className="text-h3">Beauty & Skincare</CardTitle>
                   <CardDescription className="text-body">
                     Enhance natural beauty with top-tier skincare solutions.
                   </CardDescription>

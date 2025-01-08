@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Telegram, MessageSquare } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 import LogoSvg from "../assets/logo.svg";
@@ -53,6 +53,18 @@ const Footer = () => {
                 <MapPin size={16} />
                 <span>Nueva Esparta, Campiña, T-5, Venezuela</span>
               </li>
+              <li className="flex items-center space-x-2 text-text-light">
+                <Telegram size={16} />
+                <a href="https://t.me/solariis" target="_blank" rel="noopener noreferrer" className="hover:text-text transition-colors">
+                  @solariis
+                </a>
+              </li>
+              <li className="flex items-center space-x-2 text-text-light">
+                <MessageSquare size={16} />
+                <a href="https://wa.me/584120907684" target="_blank" rel="noopener noreferrer" className="hover:text-text transition-colors">
+                  WhatsApp
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -76,10 +88,8 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-200">
-          <div className="flex justify-center space-x-4 mb-4">
-            <div className="flex items-end">
-              <img src={LogoSvg} alt="Solariis Logo" className="w-32 h-auto" />
-            </div>
+          <div className="flex justify-center mb-4">
+            <img src={LogoSvg} alt="Solariis Logo" className="w-32 h-auto" />
           </div>
           <p className="text-center text-text-light text-body-sm">
             © 2025 Solariis Venezuela C.A. All rights reserved.

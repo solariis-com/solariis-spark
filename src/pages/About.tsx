@@ -4,7 +4,7 @@ import { translations } from "../translations";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Building2, Network, BarChart3, ShieldCheck } from "lucide-react";
+import { CheckCircle2, Leaf, Network, BarChart3, ShieldCheck } from "lucide-react";
 
 const About = () => {
   const { language } = useLanguage();
@@ -77,7 +77,7 @@ const About = () => {
           <h2 className="font-heading text-h2 text-text mb-8">What We Do</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up">
-              <Building2 className="w-12 h-12 text-primary mb-4" />
+              <Leaf className="w-12 h-12 text-primary mb-4" />
               <h3 className="font-heading text-h4 text-text mb-3">Brand Representation & Market Expansion</h3>
               <p className="text-body text-text-light">
                 Acting as official representatives for international beauty and wellness brands.

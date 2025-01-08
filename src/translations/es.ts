@@ -8,7 +8,7 @@ export const es = {
   },
   hero: {
     title: "Conectando Marcas de Belleza y Bienestar",
-    subtitle: "con Consumidores Venezolanos",
+    subtitle: "con Venezuela",
     description: "Conectamos marcas internacionales con el mercado venezolano, ofreciendo productos de salud y belleza de alta calidad.",
     cta: {
       partner: "Asóciate con Nosotros",

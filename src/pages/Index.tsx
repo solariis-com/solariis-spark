@@ -2,43 +2,36 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useLanguage } from "../contexts/LanguageContext";
+import { translations } from "../translations";
 
 const Index = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const categories = [
     {
-      title: "Skincare",
-      description: "Premium skincare solutions including moisturizers, serums, cleansers, and treatments.",
-      items: ["Moisturizers & Creams", "Serums & Treatments", "Cleansers & Toners", "Sunscreens"],
+      key: "skincare",
       image: "/lovable-uploads/7acb4e9d-c852-4bb5-afa9-9e91be10a7c0.png"
     },
     {
-      title: "Haircare",
-      description: "Professional haircare products for all hair types and concerns.",
-      items: ["Shampoos & Conditioners", "Hair Masks", "Oils & Serums", "Styling Products"],
+      key: "haircare",
       image: "/lovable-uploads/98af4ef5-abb3-49be-b3b8-f7d69d917f30.png"
     },
     {
-      title: "Wellness & Self-Care",
-      description: "Holistic wellness solutions for mind, body, and soul.",
-      items: ["Body Care", "Essential Oils", "Supplements", "Relaxation Aids"],
+      key: "wellness",
       image: "/lovable-uploads/432c0ff8-3f4f-4199-a36a-8d63f851bd8a.png"
     },
     {
-      title: "Makeup & Beauty",
-      description: "Essential beauty products for a flawless, natural look.",
-      items: ["BB & CC Creams", "Primers", "Lip Care", "Eye Care"],
+      key: "makeup",
       image: "/lovable-uploads/bc578a58-dea8-4c91-9ac8-423c5d6b3ca4.png"
     },
     {
-      title: "Beauty Tools",
-      description: "Innovative beauty tools and accessories for enhanced skincare routines.",
-      items: ["Facial Rollers", "LED Devices", "Styling Tools", "Applicators"],
+      key: "tools",
       image: "/lovable-uploads/0a139b6f-dba1-4876-b44b-e617cf574783.png"
     },
     {
-      title: "Eco-Friendly Beauty",
-      description: "Sustainable and environmentally conscious beauty solutions.",
-      items: ["Organic Products", "Zero-Waste", "Cruelty-Free", "Clean Beauty"],
+      key: "eco",
       image: "/lovable-uploads/66557a14-680c-4358-bc47-6f9ab21bb0a6.png"
     }
   ];
@@ -65,24 +58,24 @@ const Index = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-up space-y-8">
             <h1 className="font-heading text-display font-bold text-white mb-6 leading-tight">
-              Elevating Beauty Standards
-              <span className="block text-primary">One Brand at a Time</span>
+              {t.hero.title}
+              <span className="block text-primary">{t.hero.subtitle}</span>
             </h1>
             <p className="text-body-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              Beauty is more than a product—it's an experience. At Solariis, we curate and distribute premium brands that redefine industry standards, making radiance accessible to all.
+              {t.hero.description}
             </p>
             <div className="space-x-6">
               <Link
                 to="/contact"
                 className="inline-block bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 text-button font-semibold shadow-lg hover:shadow-primary/30"
               >
-                Partner with Us
+                {t.hero.cta.partner}
               </Link>
               <Link
                 to="/about"
                 className="inline-block bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 text-button font-semibold"
               >
-                Learn More
+                {t.hero.cta.learnMore}
               </Link>
             </div>
           </div>
@@ -94,39 +87,39 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up">
-              <h3 className="font-heading text-h3 font-semibold text-text mb-4">For Brands</h3>
+              <h3 className="font-heading text-h3 font-semibold text-text mb-4">{t.features.forBrands.title}</h3>
               <p className="text-body text-text-light mb-4">
-                We help exceptional health and beauty brands reach their full potential in new markets.
+                {t.features.forBrands.description}
               </p>
               <Link
                 to="/contact"
                 className="text-text hover:text-text-light transition-colors"
               >
-                Learn more →
+                {t.features.forBrands.link} →
               </Link>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <h3 className="font-heading text-xl font-semibold text-text mb-4">For Distributors</h3>
+              <h3 className="font-heading text-xl font-semibold text-text mb-4">{t.features.forDistributors.title}</h3>
               <p className="text-text-light mb-4">
-                Access premium health and beauty products from vetted, innovative brands.
+                {t.features.forDistributors.description}
               </p>
               <Link
                 to="/contact"
                 className="text-text hover:text-text-light transition-colors"
               >
-                Learn more →
+                {t.features.forDistributors.link} →
               </Link>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.4s" }}>
-              <h3 className="font-heading text-xl font-semibold text-text mb-4">Our Promise</h3>
+              <h3 className="font-heading text-xl font-semibold text-text mb-4">{t.features.promise.title}</h3>
               <p className="text-text-light mb-4">
-                Quality, transparency, and excellence in every partnership we build.
+                {t.features.promise.description}
               </p>
               <Link
                 to="/about"
                 className="text-text hover:text-text-light transition-colors"
               >
-                Learn more →
+                {t.features.promise.link} →
               </Link>
             </div>
           </div>
@@ -136,11 +129,11 @@ const Index = () => {
       {/* Categories Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="font-heading text-h2 font-bold text-text mb-8">Our Product Categories</h2>
+          <h2 className="font-heading text-h2 font-bold text-text mb-8">{t.categories.title}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => (
               <div
-                key={index}
+                key={category.key}
                 className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -148,15 +141,15 @@ const Index = () => {
                   <AspectRatio ratio={16 / 9}>
                     <img 
                       src={`${category.image}?auto=format&fit=crop&w=800&q=80`}
-                      alt={category.title}
+                      alt={t.categories[category.key].title}
                       className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300"
                     />
                   </AspectRatio>
                 </div>
-                <h3 className="font-heading text-h3 font-semibold text-text mb-3">{category.title}</h3>
-                <p className="text-body-sm text-text-light mb-4">{category.description}</p>
+                <h3 className="font-heading text-h3 font-semibold text-text mb-3">{t.categories[category.key].title}</h3>
+                <p className="text-body-sm text-text-light mb-4">{t.categories[category.key].description}</p>
                 <ul className="space-y-2 text-body-sm text-text-light">
-                  {category.items.map((item, itemIndex) => (
+                  {t.categories[category.key].items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-center">
                       <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
                       {item}

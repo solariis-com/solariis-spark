@@ -41,7 +41,7 @@ export const translations = {
     hero: {
       title: "Elevating Beauty Standards",
       subtitle: "One Brand at a Time",
-      description: "Beauty is more than a product—it's an experience. At Solariis, we curate and distribute premium brands that redefine industry standards, making radiance accessible to all.",
+      description: "Gain exclusive access to high-quality, vetted international brands in the health and beauty industry. We provide reliable supply chains, competitive wholesale pricing, and marketing support for retailers and resellers.",
       cta: {
         partner: "Partner with Us",
         learnMore: "Learn More"

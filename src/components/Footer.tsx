@@ -13,7 +13,6 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-text">{t.footer.company}</h3>
             <img src={LogoSvg} alt="Solariis Logo" className="w-32 h-auto" />
             <p className="text-text-light">
               LIVE RADIANTLY

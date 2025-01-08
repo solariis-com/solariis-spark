@@ -9,7 +9,7 @@ const Index = () => {
       title: "Skincare",
       description: "Premium skincare solutions including moisturizers, serums, cleansers, and treatments.",
       items: ["Moisturizers & Creams", "Serums & Treatments", "Cleansers & Toners", "Sunscreens"],
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9"
+      image: "/lovable-uploads/7acb4e9d-c852-4bb5-afa9-9e91be10a7c0.png"
     },
     {
       title: "Haircare",

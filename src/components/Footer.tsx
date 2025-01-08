@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, MessageSquare } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 import LogoSvg from "../assets/logo.svg";
@@ -38,6 +38,7 @@ const Footer = () => {
     <footer className="bg-accent mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Quick Links section */}
           <div className="space-y-4">
             <h4 className="font-semibold text-text">{t.footer.quickLinks}</h4>
             <ul className="space-y-2">
@@ -80,7 +81,7 @@ const Footer = () => {
                 <span>Nueva Esparta, Campiña, T-5, Venezuela</span>
               </li>
               <li className="flex items-center space-x-2 text-text-light">
-                <MessageSquare size={16} />
+                <MessageCircle size={16} />
                 <a 
                   href="https://wa.me/584120907684" 
                   target="_blank" 
@@ -104,6 +105,7 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Login Form section */}
           <div className="space-y-4">
             <h4 className="font-semibold text-text">Distributor Login</h4>
             <p className="text-text-light">Access your distributor or reseller account</p>
@@ -133,7 +135,6 @@ const Footer = () => {
               </button>
             </form>
           </div>
-
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-200">

@@ -80,7 +80,7 @@ const Categories = () => {
               {/* Personal Care */}
               <Card className="bg-white/80 backdrop-blur">
                 <CardHeader>
-                  <CardTitle className="text-h3">🛁 Personal Care</CardTitle>
+                  <CardTitle className="text-h3">Personal Care</CardTitle>
                   <CardDescription className="text-body">
                     Everyday essentials for a healthier lifestyle.
                   </CardDescription>

@@ -27,7 +27,7 @@ const Index = () => {
       title: "Makeup & Beauty",
       description: "Essential beauty products for a flawless, natural look.",
       items: ["BB & CC Creams", "Primers", "Lip Care", "Eye Care"],
-      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901"
+      image: "/lovable-uploads/bc578a58-dea8-4c91-9ac8-423c5d6b3ca4.png"
     },
     {
       title: "Beauty Tools",

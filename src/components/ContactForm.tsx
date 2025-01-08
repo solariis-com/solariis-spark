@@ -125,8 +125,7 @@ export function ContactForm() {
         </Form>
       </TabsContent>
       <TabsContent value="calendar">
-        <div className="h-[600px] relative">
-          {/* Replace 'your-cal-link' with your actual Cal.com link */}
+        <div className="h-[600px]">
           <Cal 
             calLink="solariis/solariis"
             style={{
@@ -135,20 +134,6 @@ export function ContactForm() {
               overflow: "hidden"
             }}
           />
-          <div className="absolute inset-0 flex items-center justify-center bg-background/80 backdrop-blur-sm">
-            <div className="text-center p-6">
-              <h3 className="text-h3 mb-4">Calendar Integration</h3>
-              <p className="text-body-lg mb-4">Replace 'your-cal-link' in ContactForm.tsx with your Cal.com scheduling link to enable direct meeting scheduling.</p>
-              <a 
-                href="https://cal.com/signup" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-primary hover:text-primary-dark"
-              >
-                Sign up for Cal.com →
-              </a>
-            </div>
-          </div>
         </div>
       </TabsContent>
     </Tabs>

@@ -35,9 +35,17 @@ const formSchema = z.object({
   }),
 })
 
+// Initialize Supabase client with explicit type checking
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.error('Supabase credentials are not properly configured')
+}
+
 const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL!,
-  import.meta.env.VITE_SUPABASE_ANON_KEY!
+  supabaseUrl || '',
+  supabaseAnonKey || ''
 )
 
 export function ContactForm() {
@@ -55,6 +63,15 @@ export function ContactForm() {
   })
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    if (!supabaseUrl || !supabaseAnonKey) {
+      toast({
+        title: "Configuration Error",
+        description: "The application is not properly configured. Please contact support.",
+        variant: "destructive",
+      })
+      return
+    }
+
     try {
       setIsSubmitting(true)
       

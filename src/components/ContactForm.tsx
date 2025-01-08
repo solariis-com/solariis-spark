@@ -54,7 +54,7 @@ export function ContactForm() {
       setIsSubmitting(true)
       
       // Insert into contact_submissions table
-      const { data, error: submissionError } = await supabase
+      const { error: submissionError } = await supabase
         .from('contact_submissions')
         .insert([
           {
@@ -64,14 +64,17 @@ export function ContactForm() {
             message: values.message,
           }
         ])
-        .select()
-        .single()
 
       if (submissionError) throw submissionError
 
-      // Trigger email sending via Edge Function
+      // Only if the submission was successful, trigger email sending
       const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
-        body: { record: data },
+        body: { 
+          name: values.name,
+          email: values.email,
+          subject: values.subject,
+          message: values.message
+        },
       })
 
       if (emailError) throw emailError

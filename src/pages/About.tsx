@@ -4,7 +4,7 @@ import { translations } from "../translations";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Leaf, ShoppingBag, BarChart3, ShieldCheck } from "lucide-react";
+import { CheckCircle2, Leaf, Truck, BarChart3, ShieldCheck } from "lucide-react";
 
 const About = () => {
   const { language } = useLanguage();
@@ -84,7 +84,7 @@ const About = () => {
               </p>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <ShoppingBag className="w-12 h-12 text-primary mb-4" strokeWidth={1.5} />
+              <Truck className="w-12 h-12 text-primary mb-4" strokeWidth={1.5} />
               <h3 className="font-heading text-h4 text-text mb-3">Import & Distribution</h3>
               <p className="text-body text-text-light">
                 Bringing high-quality products to trusted retail chains, pharmacies, and e-commerce platforms.

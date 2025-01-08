@@ -20,7 +20,7 @@ const Categories = () => {
           <div 
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=2070')",
+              backgroundImage: "url('/lovable-uploads/d29aa07d-0654-4c3a-80be-33656915a549.png')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               filter: 'brightness(0.7)'

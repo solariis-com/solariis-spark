@@ -29,11 +29,9 @@ const Footer = () => {
 
     // Here you would typically make your authentication call
     try {
-      // For now, just log the attempt
-      console.log("Login attempt with:", { email });
-      // Clear form after submission
-      setEmail("");
-      setPassword("");
+      // Simulating a failed login attempt for demonstration
+      setError("Incorrect email or password");
+      // Don't clear the form on failed login so user can try again
     } catch (err) {
       setError("An error occurred during login");
       console.error(err);

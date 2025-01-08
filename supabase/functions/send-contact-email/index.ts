@@ -1,6 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
 
-const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY')
+const RESEND = Deno.env.get('RESEND')
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -21,12 +21,11 @@ serve(async (req) => {
   }
 
   try {
-    if (!RESEND_API_KEY) {
-      throw new Error('RESEND_API_KEY is not set')
+    if (!RESEND) {
+      throw new Error('RESEND API key is not set')
     }
 
     const formData: ContactFormData = await req.json()
-    
     console.log('Received form data:', formData)
 
     if (!formData.name || !formData.email || !formData.subject || !formData.message) {
@@ -43,18 +42,19 @@ serve(async (req) => {
       <p>${formData.message}</p>
     `
 
-    // Send email using Resend
+    // Send email using Resend with updated API
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${RESEND_API_KEY}`,
+        'Authorization': `Bearer ${RESEND}`,
       },
       body: JSON.stringify({
-        from: 'Solariis Contact Form <contact@solariis.com>',
+        from: 'Solariis Contact Form <onboarding@resend.dev>',
         to: ['info@solariis.com'],
         subject: `New Contact Form Submission: ${formData.subject}`,
         html: emailHtml,
+        reply_to: formData.email,
       }),
     })
 

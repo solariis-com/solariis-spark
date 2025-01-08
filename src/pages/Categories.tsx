@@ -45,7 +45,7 @@ const Categories = () => {
               We specialize in importing and distributing high-quality brands across the following categories:
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+            <div className="grid grid-cols-1 gap-8 mb-20">
               {/* Beauty & Skincare */}
               <Card className="bg-white/80 backdrop-blur">
                 <CardHeader>

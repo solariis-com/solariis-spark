@@ -62,7 +62,7 @@ export default {
         'h2': ['clamp(1.75rem, 4vw, 2.5rem)', { lineHeight: '1.2' }],
         'h3': ['clamp(1.5rem, 3vw, 2.25rem)', { lineHeight: '1.3' }],
         'h4': ['clamp(1.25rem, 2.5vw, 2rem)', { lineHeight: '1.4' }],
-        'body-lg': ['clamp(1.125rem, 2vw, 1.75rem)', { lineHeight: '1.6', fontWeight: '300' }],
+        'body-lg': ['clamp(1.125rem, 2vw, 1.75rem)', { lineHeight: '1.6', fontWeight: '200' }],
         'body': ['clamp(1rem, 1.5vw, 1.5rem)', { lineHeight: '1.5', fontWeight: '300' }],
         'body-sm': ['clamp(0.875rem, 1.25vw, 1.25rem)', { lineHeight: '1.4', fontWeight: '300' }],
         'button': ['1rem', { lineHeight: '1.5', letterSpacing: '0.05em', textTransform: 'uppercase' }],

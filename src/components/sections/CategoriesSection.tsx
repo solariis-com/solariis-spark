@@ -29,7 +29,7 @@ const CategoriesSection = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted">
       <div className="max-w-7xl mx-auto">
         <h2 className="font-heading text-h2 text-text mb-8 text-center">{t.categories.title}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {categories.map((category, index) => (
             <div
               key={category.key}

@@ -2,6 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 import { ContactForm } from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, Globe, Instagram, Facebook, Linkedin } from "lucide-react";
 
 const Contact = () => {
@@ -89,6 +90,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

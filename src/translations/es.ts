@@ -6,6 +6,55 @@ export const es = {
     contact: "Contacto",
     partnerWithUs: "Asóciese con Nosotros"
   },
+  hero: {
+    title: "Salud y Belleza Premium",
+    subtitle: "Distribución",
+    description: "Conectamos marcas internacionales con el mercado venezolano, ofreciendo productos de salud y belleza de alta calidad.",
+    cta: {
+      partner: "Asóciese con Nosotros",
+      learnMore: "Más Información"
+    }
+  },
+  features: {
+    forBrands: {
+      title: "Para Marcas",
+      description: "¿Buscas entrar al mercado venezolano? Ofrecemos soluciones integrales de distribución y experiencia en el mercado.",
+      link: "Más Información"
+    },
+    forDistributors: {
+      title: "Para Distribuidores",
+      description: "Únete a nuestra red de distribuidores de confianza y accede a marcas internacionales premium.",
+      link: "Únete a Nuestra Red"
+    }
+  },
+  footer: {
+    quickLinks: "Enlaces Rápidos",
+    contact: "Información de Contacto"
+  },
+  contact: {
+    hero: {
+      title: "Contáctanos",
+      subtitle: "Estamos aquí para ayudarte y responder cualquier pregunta que tengas."
+    },
+    reachUs: {
+      title: "Encuéntranos",
+      address: {
+        title: "Dirección",
+        value: "Nueva Esparta, Campiña, T-5, Venezuela"
+      },
+      phone: {
+        title: "Teléfono",
+        value: "+58 (412) 0907684"
+      },
+      email: {
+        title: "Correo",
+        value: "info@solariis.com"
+      }
+    },
+    form: {
+      title: "Envíanos un Mensaje"
+    }
+  },
   categories: {
     title: "Descubre Nuestras Categorías de Productos",
     description: "En Solariis, traemos productos premium de salud, bienestar y belleza al mercado, cuidadosamente seleccionados para satisfacer las necesidades de consumidores y minoristas.",
@@ -19,7 +68,7 @@ export const es = {
         "Hidratantes y Cremas",
         "Sueros y Tratamientos",
         "Limpiadores y Tónicos",
-        "Protectores Solares"
+        "Protección Solar"
       ]
     },
     haircare: {

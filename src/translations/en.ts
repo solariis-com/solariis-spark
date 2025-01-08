@@ -6,6 +6,55 @@ export const en = {
     contact: "Contact",
     partnerWithUs: "Partner With Us"
   },
+  hero: {
+    title: "Premium Health & Beauty",
+    subtitle: "Distribution",
+    description: "We connect international brands with the Venezuelan market, offering high-quality health and beauty products.",
+    cta: {
+      partner: "Partner with Us",
+      learnMore: "Learn More"
+    }
+  },
+  features: {
+    forBrands: {
+      title: "For Brands",
+      description: "Looking to enter the Venezuelan market? We offer comprehensive distribution solutions and market expertise.",
+      link: "Learn More"
+    },
+    forDistributors: {
+      title: "For Distributors",
+      description: "Join our network of trusted distributors and access premium international brands.",
+      link: "Join Our Network"
+    }
+  },
+  footer: {
+    quickLinks: "Quick Links",
+    contact: "Contact Information"
+  },
+  contact: {
+    hero: {
+      title: "Get in Touch",
+      subtitle: "We're here to help and answer any questions you might have."
+    },
+    reachUs: {
+      title: "Reach Us",
+      address: {
+        title: "Address",
+        value: "Nueva Esparta, Campiña, T-5, Venezuela"
+      },
+      phone: {
+        title: "Phone",
+        value: "+58 (412) 0907684"
+      },
+      email: {
+        title: "Email",
+        value: "info@solariis.com"
+      }
+    },
+    form: {
+      title: "Send us a Message"
+    }
+  },
   categories: {
     title: "Discover Our Product Categories",
     description: "At Solariis, we bring premium health, wellness, and beauty products to market, carefully curated to meet the needs of consumers and retailers.",

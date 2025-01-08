@@ -44,7 +44,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 flex items-center justify-center h-full">
+        <div className="relative z-10 container mx-auto p-8 sm:p-12 lg:p-16 flex items-center justify-center h-full">
           <div className="animate-fade-up space-y-8 text-center max-w-4xl">
             <h1 className="font-body text-display text-white mb-6 leading-tight">
               {t.hero.title}

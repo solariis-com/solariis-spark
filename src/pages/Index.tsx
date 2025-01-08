@@ -39,7 +39,7 @@ const Index = () => {
       title: "Eco-Friendly Beauty",
       description: "Sustainable and environmentally conscious beauty solutions.",
       items: ["Organic Products", "Zero-Waste", "Cruelty-Free", "Clean Beauty"],
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b"
+      image: "/lovable-uploads/483723ee-0cd8-4e0c-b235-d8a5e1dec71f.png"
     }
   ];
 

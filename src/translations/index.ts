@@ -41,7 +41,7 @@ export const translations = {
     hero: {
       title: "Elevating Beauty Standards",
       subtitle: "One Brand at a Time",
-      description: "We partner with exceptional health and beauty brands to adapt and successfully penetrate the Venezuelan market. From regulatory compliance to distribution and marketing, we ensure a seamless market entry and sustainable growth.",
+      description: "Beauty is more than a product—it's an experience. At Solariis, we curate and distribute premium brands that redefine industry standards, making radiance accessible to all.",
       cta: {
         partner: "Partner with Us",
         learnMore: "Learn More"

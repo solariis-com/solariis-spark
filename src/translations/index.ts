@@ -24,7 +24,7 @@ export const translations = {
         },
         email: {
           title: "Email",
-          value: "contact@solariis.com"
+          value: "info@solariis.com"
         },
         website: {
           title: "Website",
@@ -135,7 +135,7 @@ export const translations = {
         },
         email: {
           title: "Correo Electrónico",
-          value: "contact@solariis.com"
+          value: "info@solariis.com"
         },
         website: {
           title: "Sitio Web",

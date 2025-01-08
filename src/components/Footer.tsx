@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, WhatsApp, Telegram } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 import LogoSvg from "../assets/logo.svg";
@@ -80,7 +80,7 @@ const Footer = () => {
                 <span>Nueva Esparta, Campiña, T-5, Venezuela</span>
               </li>
               <li className="flex items-center space-x-2 text-text-light">
-                <ExternalLink size={16} />
+                <WhatsApp size={16} />
                 <a 
                   href="https://wa.me/584120907684" 
                   target="_blank" 
@@ -91,7 +91,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center space-x-2 text-text-light">
-                <ExternalLink size={16} />
+                <Telegram size={16} />
                 <a 
                   href="https://t.me/solariis" 
                   target="_blank" 

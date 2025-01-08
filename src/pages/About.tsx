@@ -15,7 +15,7 @@ const About = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{
@@ -27,14 +27,14 @@ const About = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-fade-up space-y-6">
-            <h1 className="font-heading text-display text-white mb-4">
+          <div className="animate-fade-up space-y-6 py-12 md:py-16 lg:py-20">
+            <h1 className="font-heading text-display text-white mb-4 px-4">
               Bringing Global Wellness & Beauty to You
             </h1>
-            <p className="text-body-lg text-white/90 max-w-3xl mx-auto">
+            <p className="text-body-lg text-white/90 max-w-3xl mx-auto px-4">
               Solariis is dedicated to introducing and commercializing premium health, wellbeing, and beauty brands in Venezuela.
             </p>
-            <div className="space-x-4">
+            <div className="space-x-4 pt-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary-dark">
                 <Link to="/contact">Contact Us</Link>
               </Button>

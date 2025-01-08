@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Index = () => {
   const categories = [
@@ -129,12 +130,14 @@ const Index = () => {
                 className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="aspect-w-16 aspect-h-9 mb-4 overflow-hidden rounded-lg">
-                  <img 
-                    src={`${category.image}?auto=format&fit=crop&w=800&q=80`}
-                    alt={category.title}
-                    className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300"
-                  />
+                <div className="mb-4 overflow-hidden rounded-lg">
+                  <AspectRatio ratio={16 / 9}>
+                    <img 
+                      src={`${category.image}?auto=format&fit=crop&w=800&q=80`}
+                      alt={category.title}
+                      className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300"
+                    />
+                  </AspectRatio>
                 </div>
                 <h3 className="text-xl font-semibold text-text mb-3">{category.title}</h3>
                 <p className="text-text-light mb-4 text-sm">{category.description}</p>

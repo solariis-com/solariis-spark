@@ -3,7 +3,7 @@ export const translations = {
     nav: {
       home: "Home",
       about: "About",
-      products: "Products",
+      products: "Categories",  // Changed from "Products" to "Categories"
       contact: "Contact",
       partnerWithUs: "Partner with Us"
     },
@@ -83,7 +83,7 @@ export const translations = {
     nav: {
       home: "Inicio",
       about: "Nosotros",
-      products: "Productos",
+      products: "Categorías",  // Changed from "Productos" to "Categorías"
       contact: "Contacto",
       partnerWithUs: "Asóciese con Nosotros"
     },

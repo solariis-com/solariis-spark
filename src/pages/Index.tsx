@@ -45,15 +45,15 @@ const Index = () => {
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-          <div className="animate-fade-up py-16 space-y-12 text-center max-w-4xl">
-            <h1 className="font-body text-display text-white leading-tight">
+          <div className="animate-fade-up space-y-8 text-center max-w-4xl">
+            <h1 className="font-body text-display text-white mb-6 leading-tight">
               {t.hero.title}
-              <span className="block text-primary mt-4">{t.hero.subtitle}</span>
+              <span className="block text-primary">{t.hero.subtitle}</span>
             </h1>
-            <p className="text-body-lg text-white/90">
+            <p className="text-body-lg text-white/90 mb-8">
               {t.hero.description}
             </p>
-            <div className="space-x-6 pt-4">
+            <div className="space-x-6">
               <Link
                 to="/contact"
                 className="inline-block bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 text-button font-semibold shadow-lg hover:shadow-primary/30"

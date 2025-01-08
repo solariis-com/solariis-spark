@@ -113,8 +113,8 @@ export const en = {
     partnerWithUs: {
       title: "Partner With Us",
       description: "Whether you're a retailer, distributor, or brand looking to enter the market, we're here to collaborate. Explore our product categories and discover how we can work together.",
-      contact: "📩 Contact us today to learn more!",
-      button: "Get in Touch 🚀"
+      contact: "Contact us today to learn more!",
+      button: "Get in Touch"
     }
   }
 };

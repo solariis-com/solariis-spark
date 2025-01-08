@@ -113,8 +113,8 @@ export const es = {
     partnerWithUs: {
       title: "Asóciate con Nosotros",
       description: "Si eres minorista, distribuidor o marca buscando entrar al mercado, estamos aquí para colaborar. Explora nuestras categorías de productos y descubre cómo podemos trabajar juntos.",
-      contact: "📩 ¡Contáctanos hoy para saber más!",
-      button: "Ponte en Contacto 🚀"
+      contact: "¡Contáctanos hoy para saber más!",
+      button: "Ponte en Contacto"
     }
   }
 };

@@ -1,6 +1,6 @@
 "use client"
 
-import { InlineWidget } from "@calcom/embed-react";
+import Cal from "@calcom/embed-react";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
@@ -126,11 +126,12 @@ export function ContactForm() {
       </TabsContent>
       <TabsContent value="calendar">
         <div className="h-[600px]">
-          <InlineWidget 
-            url="https://calendly.com/your-calendly-url" 
-            styles={{
-              height: '100%',
-              width: '100%',
+          <Cal 
+            calLink="your-calendly-url"
+            style={{
+              width: "100%",
+              height: "100%",
+              overflow: "hidden"
             }}
           />
         </div>

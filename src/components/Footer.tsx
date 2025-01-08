@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, MessageSquare, BrandTelegram } from "lucide-react";
+import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 import LogoSvg from "../assets/logo.svg";
@@ -54,7 +54,7 @@ const Footer = () => {
                 <span>Nueva Esparta, Campiña, T-5, Venezuela</span>
               </li>
               <li className="flex items-center space-x-2 text-text-light">
-                <BrandTelegram size={16} />
+                <MessageSquare size={16} />
                 <a href="https://t.me/solariis" target="_blank" rel="noopener noreferrer" className="hover:text-text transition-colors">
                   @solariis
                 </a>

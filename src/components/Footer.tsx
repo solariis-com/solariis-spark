@@ -57,20 +57,28 @@ const Footer = () => {
           </div>
 
           <div className="space-y-4">
-            <h4 className="font-semibold text-text">{t.footer.newsletter.title}</h4>
-            <p className="text-text-light">{t.footer.newsletter.description}</p>
+            <h4 className="font-semibold text-text">Distributor Login</h4>
+            <p className="text-text-light">Access your distributor or reseller account</p>
             <form className="space-y-2">
               <input
                 type="email"
-                placeholder={t.footer.newsletter.placeholder}
+                placeholder="Email"
+                className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <input
+                type="password"
+                placeholder="Password"
                 className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <button
                 type="submit"
                 className="w-full bg-primary hover:bg-primary-dark text-text px-4 py-2 rounded-lg transition-colors"
               >
-                {t.footer.newsletter.subscribe}
+                Login
               </button>
+              <p className="text-sm text-text-light text-center">
+                <a href="#" className="hover:text-primary transition-colors">Forgot password?</a>
+              </p>
             </form>
           </div>
         </div>

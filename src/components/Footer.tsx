@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
-import { ReactComponent as Logo } from "../assets/logo.svg";
+import LogoSvg from "../assets/logo.svg";
 
 const Footer = () => {
   const { language } = useLanguage();
@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-text">{t.footer.company}</h3>
-            <Logo />
+            <LogoSvg className="w-32 h-auto" />
             <p className="text-text-light">
               LIVE RADIANTLY
             </p>

@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-200">
-          <div className="flex flex-col items-center space-y-4 mb-4">
+          <div className="flex items-center justify-center space-x-4 mb-4">
             <img src={LogoSvg} alt="Solariis Logo" className="w-32 h-auto" />
             <p className="text-text-light">
               Live Radiantly;

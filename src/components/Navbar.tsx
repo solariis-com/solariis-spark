@@ -32,12 +32,7 @@ const Navbar = () => {
             <Link to="/contact" className="text-text-light hover:text-text transition-colors">
               Contact
             </Link>
-            <Link
-              to="/contact"
-              className="inline-block bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-all duration-300 text-button font-semibold"
-            >
-              Partner with Us
-            </Link>
+            {/* Partner with Us button temporarily hidden */}
           </div>
 
           {/* Mobile menu button */}
@@ -83,13 +78,7 @@ const Navbar = () => {
               >
                 Contact
               </Link>
-              <Link
-                to="/contact"
-                className="block px-8 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all duration-300 text-button font-semibold"
-                onClick={toggleMenu}
-              >
-                Partner with Us
-              </Link>
+              {/* Partner with Us button temporarily hidden */}
             </div>
           </div>
         )}

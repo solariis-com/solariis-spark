@@ -34,7 +34,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/contact"
-              className="btn-primary px-6 py-3 rounded-lg font-heading text-white"
+              className="bg-primary hover:bg-primary-dark text-text px-4 py-2 rounded-lg transition-colors"
             >
               Partner with Us
             </Link>
@@ -85,7 +85,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/contact"
-                className="btn-primary px-6 py-3 rounded-lg font-heading text-white block"
+                className="block px-3 py-2 bg-primary hover:bg-primary-dark text-text rounded-lg transition-colors"
                 onClick={toggleMenu}
               >
                 Partner with Us

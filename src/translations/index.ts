@@ -65,6 +65,18 @@ export const translations = {
         description: "Sustainable and environmentally conscious beauty solutions.",
         items: ["Organic Products", "Zero-Waste", "Cruelty-Free", "Clean Beauty"]
       }
+    },
+    footer: {
+      company: "Solariis",
+      description: "Bringing exceptional health and beauty products to the market.",
+      quickLinks: "Quick Links",
+      contact: "Contact",
+      newsletter: {
+        title: "Newsletter",
+        description: "Stay updated with our latest news.",
+        placeholder: "Enter your email",
+        subscribe: "Subscribe"
+      }
     }
   },
   es: {
@@ -132,6 +144,18 @@ export const translations = {
         title: "Belleza Ecológica",
         description: "Soluciones de belleza sostenibles y respetuosas con el medio ambiente.",
         items: ["Productos Orgánicos", "Cero Residuos", "Sin Crueldad Animal", "Belleza Limpia"]
+      }
+    },
+    footer: {
+      company: "Solariis",
+      description: "Llevando productos excepcionales de salud y belleza al mercado.",
+      quickLinks: "Enlaces Rápidos",
+      contact: "Contacto",
+      newsletter: {
+        title: "Boletín",
+        description: "Mantente actualizado con nuestras últimas noticias.",
+        placeholder: "Ingresa tu correo",
+        subscribe: "Suscribirse"
       }
     }
   }

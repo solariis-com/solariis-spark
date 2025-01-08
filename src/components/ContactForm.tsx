@@ -17,8 +17,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { InlineWidget } from "react-calendly"
-import { createClient } from '@supabase/supabase-js'
-import { useState, useMemo } from "react"
+import { supabase } from '@/integrations/supabase/client'
+import { useState } from "react"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -39,18 +39,6 @@ export function ContactForm() {
   const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
   
-  const supabase = useMemo(() => {
-    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-    const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
-
-    if (!supabaseUrl || !supabaseAnonKey) {
-      console.error('Supabase credentials are not properly configured')
-      return null
-    }
-
-    return createClient(supabaseUrl, supabaseAnonKey)
-  }, [])
-  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -62,15 +50,6 @@ export function ContactForm() {
   })
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    if (!supabase) {
-      toast({
-        title: "Configuration Error",
-        description: "The application is not properly configured. Please contact support.",
-        variant: "destructive",
-      })
-      return
-    }
-
     try {
       setIsSubmitting(true)
       

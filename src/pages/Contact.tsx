@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
-import ContactForm from "@/components/ContactForm";
+import { ContactForm } from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
 import { Mail, Phone, MapPin, Globe, Instagram, Facebook, Linkedin } from "lucide-react";
 

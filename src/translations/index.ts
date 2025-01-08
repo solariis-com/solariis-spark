@@ -3,9 +3,40 @@ export const translations = {
     nav: {
       home: "Home",
       about: "About",
-      products: "Categories",  // Changed from "Products" to "Categories"
+      products: "Categories",
       contact: "Contact",
       partnerWithUs: "Partner with Us"
+    },
+    contact: {
+      hero: {
+        title: "Get in Touch",
+        subtitle: "We'd love to hear from you. Send us a message and we'll respond as soon as possible."
+      },
+      reachUs: {
+        title: "How to Reach Us",
+        address: {
+          title: "Address",
+          value: "123 Business Street, Suite 100, Los Angeles, CA 90012"
+        },
+        phone: {
+          title: "Phone",
+          value: "+1 (555) 123-4567"
+        },
+        email: {
+          title: "Email",
+          value: "contact@solariis.com"
+        },
+        website: {
+          title: "Website",
+          value: "www.solariis.com"
+        }
+      },
+      social: {
+        title: "Follow Us"
+      },
+      form: {
+        title: "Send Us a Message"
+      }
     },
     hero: {
       title: "Elevating Beauty Standards",
@@ -83,9 +114,40 @@ export const translations = {
     nav: {
       home: "Inicio",
       about: "Nosotros",
-      products: "Categorías",  // Changed from "Productos" to "Categorías"
+      products: "Categorías",
       contact: "Contacto",
       partnerWithUs: "Asóciese con Nosotros"
+    },
+    contact: {
+      hero: {
+        title: "Contáctenos",
+        subtitle: "Nos encantaría saber de usted. Envíenos un mensaje y le responderemos lo antes posible."
+      },
+      reachUs: {
+        title: "Cómo Contactarnos",
+        address: {
+          title: "Dirección",
+          value: "123 Business Street, Suite 100, Los Angeles, CA 90012"
+        },
+        phone: {
+          title: "Teléfono",
+          value: "+1 (555) 123-4567"
+        },
+        email: {
+          title: "Correo Electrónico",
+          value: "contact@solariis.com"
+        },
+        website: {
+          title: "Sitio Web",
+          value: "www.solariis.com"
+        }
+      },
+      social: {
+        title: "Síguenos"
+      },
+      form: {
+        title: "Envíenos un Mensaje"
+      }
     },
     hero: {
       title: "Elevando los Estándares de Belleza",

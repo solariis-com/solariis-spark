@@ -84,16 +84,6 @@ export const es = {
       title: "Maquillaje y Belleza",
       description: "Productos esenciales de belleza para un look natural y perfecto.",
       items: ["BB y CC Creams", "Primers", "Cuidado Labial", "Cuidado de Ojos"]
-    },
-    tools: {
-      title: "Herramientas de Belleza",
-      description: "Herramientas y accesorios innovadores para mejorar las rutinas de cuidado de la piel.",
-      items: ["Rodillos Faciales", "Dispositivos LED", "Herramientas de Peinado", "Aplicadores"]
-    },
-    eco: {
-      title: "Belleza Ecológica",
-      description: "Soluciones de belleza sostenibles y respetuosas con el medio ambiente.",
-      items: ["Productos Orgánicos", "Cero Residuos", "Sin Crueldad Animal", "Belleza Limpia"]
     }
   },
   footer: {

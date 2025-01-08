@@ -84,16 +84,6 @@ export const en = {
       title: "Makeup & Beauty",
       description: "Essential beauty products for a flawless, natural look.",
       items: ["BB & CC Creams", "Primers", "Lip Care", "Eye Care"]
-    },
-    tools: {
-      title: "Beauty Tools",
-      description: "Innovative beauty tools and accessories for enhanced skincare routines.",
-      items: ["Facial Rollers", "LED Devices", "Styling Tools", "Applicators"]
-    },
-    eco: {
-      title: "Eco-Friendly Beauty",
-      description: "Sustainable and environmentally conscious beauty solutions.",
-      items: ["Organic Products", "Zero-Waste", "Cruelty-Free", "Clean Beauty"]
     }
   },
   footer: {

@@ -84,14 +84,14 @@ const About = () => {
               </p>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <ShoppingBag className="w-12 h-12 text-primary mb-4" strokeWidth={0.5} />
+              <Truck className="w-12 h-12 text-primary mb-4" strokeWidth={0.5} />
               <h3 className="font-heading text-h4 text-text mb-3">Import & Distribution</h3>
               <p className="text-body text-text-light">
                 Bringing high-quality products to trusted retail chains, pharmacies, and e-commerce platforms.
               </p>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-up" style={{ animationDelay: "0.3s" }}>
-              <BarChart3 className="w-12 h-12 text-primary mb-4" strokeWidth={0.5} />
+              <ShoppingBag className="w-12 h-12 text-primary mb-4" strokeWidth={0.5} />
               <h3 className="font-heading text-h4 text-text mb-3">Marketing & Brand Awareness</h3>
               <p className="text-body text-text-light">
                 Developing localized strategies, digital marketing, and retail activations to position brands effectively.

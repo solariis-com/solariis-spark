@@ -49,11 +49,11 @@ const Navbar = () => {
                 <Globe size={20} />
                 <span className="ml-1">{language.toUpperCase()}</span>
               </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => setLanguage('en')}>
+              <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg">
+                <DropdownMenuItem onClick={() => setLanguage('en')} className="hover:bg-gray-100">
                   English
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage('es')}>
+                <DropdownMenuItem onClick={() => setLanguage('es')} className="hover:bg-gray-100">
                   Español
                 </DropdownMenuItem>
               </DropdownMenuContent>

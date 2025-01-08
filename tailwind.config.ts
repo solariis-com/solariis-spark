@@ -21,7 +21,6 @@ export default {
       fontFamily: {
         heading: ['"Julius Sans One"', 'sans-serif'],
         body: ['"Rethink Sans"', 'sans-serif'],
-        cta: ['Poppins', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -30,28 +29,33 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#FF7300",
-          dark: "#CC5C00",
-          light: "#FF8F33",
+          DEFAULT: "#E56B55", // Vibrant Coral
+          light: "#F7C7B6",   // Soft Peach
+          dark: "#D04C30",    // Deep Terracotta
         },
         secondary: {
-          DEFAULT: "#000000",
-          dark: "#1A1A1A",
-          light: "#333333",
-        },
-        text: {
-          DEFAULT: "#2D3748",
-          light: "#4A5568",
+          DEFAULT: "#72C0A8", // Muted Teal
+          dark: "#52342D",    // Deep Brown
+          light: "#EADCD4",   // Warm Beige
         },
         accent: {
-          DEFAULT: "#FFFFFF",
-          dark: "#F1F0FB",
+          DEFAULT: "#FF6A00", // Radiant Orange
+          light: "#FFFFFF",   // Pure White
         },
-        teal: {
-          DEFAULT: "#7fdbd2",
-          dark: "#5EC2B8",
-          light: "#9FE5DE",
-        },
+      },
+      fontSize: {
+        // Headings
+        'h1': ['48px', { lineHeight: '56px', fontWeight: '400' }],
+        'h2': ['36px', { lineHeight: '44px', fontWeight: '400' }],
+        'h3': ['28px', { lineHeight: '36px', fontWeight: '400' }],
+        'h4': ['22px', { lineHeight: '30px', fontWeight: '400' }],
+        // Body
+        'body-lg': ['18px', { lineHeight: '28px' }],
+        'body': ['16px', { lineHeight: '24px' }],
+        'body-sm': ['14px', { lineHeight: '20px' }],
+        // UI
+        'button': ['16px', { lineHeight: '24px', letterSpacing: '0.05em', textTransform: 'uppercase' }],
+        'caption': ['12px', { lineHeight: '16px' }],
       },
       keyframes: {
         "fade-up": {

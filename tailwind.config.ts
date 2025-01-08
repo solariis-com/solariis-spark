@@ -58,7 +58,7 @@ export default {
       },
       fontSize: {
         // Responsive typography using clamp
-        'h1': ['clamp(2rem, 5vw, 3.5rem)', { lineHeight: '1.2' }],
+        'h1': ['clamp(1.75rem, 4vw, 3rem)', { lineHeight: '1.2' }], // Reduced from 2rem-3.5rem to 1.75rem-3rem
         'h2': ['clamp(1.75rem, 4vw, 3rem)', { lineHeight: '1.2' }],
         'h3': ['clamp(1.5rem, 3vw, 2.5rem)', { lineHeight: '1.3' }],
         'h4': ['clamp(1.25rem, 2.5vw, 2rem)', { lineHeight: '1.4' }],

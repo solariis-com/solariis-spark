@@ -46,7 +46,7 @@ const Index = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-up space-y-8">
-            <h1 className="font-heading text-display text-white mb-6 leading-tight">
+            <h1 className="font-body text-display text-white mb-6 leading-tight">
               {t.hero.title}
               <span className="block text-primary">{t.hero.subtitle}</span>
             </h1>

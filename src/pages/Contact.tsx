@@ -13,7 +13,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="pt-24">
-        {/* Hero Section - Updated with responsive classes */}
+        {/* Hero Section */}
         <div className="relative h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh] mb-16">
           <div className="absolute inset-0 bg-neutral-brown/30 z-10" />
           <img

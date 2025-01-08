@@ -15,7 +15,7 @@ const About = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex items-center justify-center overflow-hidden pt-24">
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{

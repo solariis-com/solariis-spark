@@ -48,25 +48,39 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary-light to-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center animate-fade-up">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-text mb-6">
-              Elevating Health & Beauty Brands
+      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("/lovable-uploads/2402b619-b4b5-464a-b073-a3f87599ae58.png")',
+            backgroundPosition: 'center 20%'
+          }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="animate-fade-up space-y-8">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Elevating Health & Beauty
+              <span className="block text-primary">to New Heights</span>
             </h1>
-            <p className="text-xl text-text-light mb-8 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
               We connect exceptional health and beauty products with the right partners and distributors.
             </p>
-            <div className="space-x-4">
+            <div className="space-x-6">
               <Link
                 to="/contact"
-                className="inline-block bg-primary hover:bg-primary-dark text-text px-8 py-3 rounded-lg transition-colors"
+                className="inline-block bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg font-semibold shadow-lg hover:shadow-primary/30"
               >
                 Partner with Us
               </Link>
               <Link
                 to="/about"
-                className="inline-block bg-white hover:bg-gray-50 text-text px-8 py-3 rounded-lg transition-colors"
+                className="inline-block bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg font-semibold"
               >
                 Learn More
               </Link>

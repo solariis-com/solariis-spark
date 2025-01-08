@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 import LogoSvg from "../assets/logo.svg";
@@ -16,7 +16,6 @@ const Footer = () => {
     e.preventDefault();
     setError("");
 
-    // Basic validation
     if (!email || !password) {
       setError("Please fill in all fields");
       return;
@@ -27,11 +26,8 @@ const Footer = () => {
       return;
     }
 
-    // Here you would typically make your authentication call
     try {
-      // Simulating a failed login attempt for demonstration
       setError("Incorrect email or password");
-      // Don't clear the form on failed login so user can try again
     } catch (err) {
       setError("An error occurred during login");
       console.error(err);
@@ -83,6 +79,28 @@ const Footer = () => {
                 <MapPin size={16} />
                 <span>Nueva Esparta, Campiña, T-5, Venezuela</span>
               </li>
+              <li className="flex items-center space-x-2 text-text-light">
+                <ExternalLink size={16} />
+                <a 
+                  href="https://wa.me/584120907684" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-text transition-colors"
+                >
+                  WhatsApp
+                </a>
+              </li>
+              <li className="flex items-center space-x-2 text-text-light">
+                <ExternalLink size={16} />
+                <a 
+                  href="https://t.me/solariis" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-text transition-colors"
+                >
+                  Telegram
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -113,9 +131,6 @@ const Footer = () => {
               >
                 Login
               </button>
-              <p className="text-sm text-text-light text-center">
-                <a href="#" className="hover:text-primary transition-colors">Forgot password?</a>
-              </p>
             </form>
           </div>
         </div>

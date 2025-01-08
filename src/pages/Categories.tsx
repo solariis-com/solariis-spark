@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -127,7 +126,6 @@ const Categories = () => {
                 "Expand Brand Reach – Helping international brands establish a strong presence in Venezuela."
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-4 p-6 rounded-lg bg-accent hover:bg-accent-dark transition-colors">
-                  <Check className="text-primary mt-1 shrink-0" />
                   <p className="text-body">{item}</p>
                 </div>
               ))}

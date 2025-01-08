@@ -146,19 +146,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Partner Brand */}
-        <section className="mb-20">
-          <h2 className="font-heading text-h2 text-text mb-8">Our First Partner Brand: Elizavecca</h2>
-          <div className="bg-white p-8 rounded-xl shadow-sm">
-            <p className="text-body text-text-light mb-6">
-              We are proud to introduce Elizavecca as our first official brand partner. With a proven track record in innovative Korean skincare, Elizavecca products align with our mission to bring trusted, high-quality beauty solutions to Venezuela.
-            </p>
-            <div className="text-sm text-text-light italic">
-              This section will expand as we onboard more brands.
-            </div>
-          </div>
-        </section>
-
         {/* Contact CTA */}
         <section className="text-center bg-muted p-12 rounded-2xl animate-fade-up">
           <h2 className="font-heading text-h2 text-text mb-6">Get in Touch</h2>

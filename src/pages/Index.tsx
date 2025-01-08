@@ -35,22 +35,22 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          className="absolute inset-0 w-full h-full bg-cover bg-center flex items-center justify-center"
           style={{
             backgroundImage: 'url("/lovable-uploads/2402b619-b4b5-464a-b073-a3f87599ae58.png")',
             backgroundPosition: 'center 20%'
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 flex items-center justify-center"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-fade-up space-y-8">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+          <div className="animate-fade-up space-y-8 text-center max-w-4xl">
             <h1 className="font-body text-display text-white mb-6 leading-tight">
               {t.hero.title}
               <span className="block text-primary">{t.hero.subtitle}</span>
             </h1>
-            <p className="text-body-lg text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-body-lg text-white/90 mb-8">
               {t.hero.description}
             </p>
             <div className="space-x-6">

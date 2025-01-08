@@ -5,63 +5,63 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 17% 23%;
+    --foreground: 15 31% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 17% 23%;
+    --card-foreground: 15 31% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 17% 23%;
+    --popover-foreground: 15 31% 25%;
 
     --primary: 24 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 0%;
+    --secondary: 9 71% 61%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 20% 97%;
-    --muted-foreground: 220 17% 23%;
+    --muted: 24 33% 87%;
+    --muted-foreground: 15 31% 25%;
 
     --accent: 0 0% 100%;
-    --accent-foreground: 220 17% 23%;
+    --accent-foreground: 15 31% 25%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 9 61% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 20% 97%;
-    --input: 240 20% 97%;
+    --border: 24 33% 87%;
+    --input: 24 33% 87%;
     --ring: 24 100% 50%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 0%;
+    --background: 15 31% 25%;
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 0%;
+    --card: 15 31% 25%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 0%;
+    --popover: 15 31% 25%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 24 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 100%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 9 71% 61%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
+    --muted: 15 31% 15%;
+    --muted-foreground: 24 33% 87%;
 
-    --accent: 0 0% 100%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 15 31% 35%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 9 61% 40%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
+    --border: 15 31% 35%;
+    --input: 15 31% 35%;
     --ring: 24 100% 50%;
   }
 }
@@ -72,6 +72,34 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1 {
+    @apply font-heading text-h1 mb-6;
+  }
+
+  h2 {
+    @apply font-heading text-h2 mb-5;
+  }
+
+  h3 {
+    @apply font-heading text-h3 mb-4;
+  }
+
+  h4 {
+    @apply font-heading text-h4 mb-3;
+  }
+
+  p {
+    @apply text-body mb-4;
+  }
+
+  .text-body-lg {
+    @apply text-body-lg;
+  }
+
+  .text-body-sm {
+    @apply text-body-sm;
   }
 }

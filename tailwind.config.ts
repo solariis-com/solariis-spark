@@ -21,7 +21,6 @@ export default {
       fontFamily: {
         heading: ['"Julius Sans One"', 'sans-serif'],
         body: ['"Rethink Sans"', 'sans-serif'],
-        cta: ['Poppins', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -30,28 +29,42 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#FF7300",
-          dark: "#CC5C00",
-          light: "#FF8F33",
+          DEFAULT: "#FF6A00",
+          dark: "#CC5500",
+          light: "#FF8533",
         },
-        secondary: {
-          DEFAULT: "#000000",
-          dark: "#1A1A1A",
-          light: "#333333",
+        coral: {
+          DEFAULT: "#E56B55",
+          dark: "#D04C30",
+          light: "#F7C7B6",
+        },
+        teal: {
+          DEFAULT: "#72C0A8",
+          dark: "#5BA88F",
+          light: "#8FCEB9",
+        },
+        neutral: {
+          beige: "#EADCD4",
+          brown: "#52342D",
         },
         text: {
-          DEFAULT: "#2D3748",
-          light: "#4A5568",
+          DEFAULT: "#52342D",
+          light: "#7A5C55",
         },
         accent: {
           DEFAULT: "#FFFFFF",
-          dark: "#F1F0FB",
+          dark: "#F7F7F7",
         },
-        teal: {
-          DEFAULT: "#7fdbd2",
-          dark: "#5EC2B8",
-          light: "#9FE5DE",
-        },
+      },
+      fontSize: {
+        // Responsive typography using clamp
+        'h1': ['clamp(2rem, 5vw, 3.5rem)', { lineHeight: '1.2' }],
+        'h2': ['clamp(1.75rem, 4vw, 3rem)', { lineHeight: '1.2' }],
+        'h3': ['clamp(1.5rem, 3vw, 2.5rem)', { lineHeight: '1.3' }],
+        'h4': ['clamp(1.25rem, 2.5vw, 2rem)', { lineHeight: '1.4' }],
+        'body-lg': ['1.125rem', { lineHeight: '1.75' }],
+        'body': ['1rem', { lineHeight: '1.5' }],
+        'body-sm': ['0.875rem', { lineHeight: '1.4' }],
       },
       keyframes: {
         "fade-up": {

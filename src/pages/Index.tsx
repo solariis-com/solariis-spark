@@ -69,7 +69,7 @@ const Index = () => {
               <span className="block text-primary">One Brand at a Time</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-              We connect exceptional health and beauty products with the right partners and distributors.
+              Beauty is more than a product—it's an experience. At Solariis, we curate and distribute premium brands that redefine industry standards, making radiance accessible to all.
             </p>
             <div className="space-x-6">
               <Link

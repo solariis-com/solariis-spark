@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link to="/">
-              <img src={logo} alt="Solariis Logo" className="h-8 w-8" />
+              <img src={logo} alt="Solariis Logo" className="h-8 w-auto" />
             </Link>
           </div>
 

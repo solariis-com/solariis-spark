@@ -42,32 +42,35 @@ serve(async (req) => {
       <p>${formData.message}</p>
     `
 
-    // Send email using Resend with updated API
-    const res = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${RESEND}`,
+    // Initialize Resend with the API key
+    const resend = {
+      emails: {
+        send: async (data: any) => {
+          const res = await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${RESEND}`,
+            },
+            body: JSON.stringify(data),
+          });
+          return res.json();
+        },
       },
-      body: JSON.stringify({
-        from: 'Solariis Contact Form <onboarding@resend.dev>',
-        to: ['info@solariis.com'],
-        subject: `New Contact Form Submission: ${formData.subject}`,
-        html: emailHtml,
-        reply_to: formData.email,
-      }),
-    })
+    };
 
-    if (!res.ok) {
-      const error = await res.text()
-      console.error('Resend API error:', error)
-      throw new Error(`Failed to send email: ${error}`)
-    }
+    // Send email using the new Resend format
+    const emailResponse = await resend.emails.send({
+      from: 'Solariis Contact Form <onboarding@resend.dev>',
+      to: ['info@solariis.com'],
+      subject: `New Contact Form Submission: ${formData.subject}`,
+      html: emailHtml,
+      reply_to: formData.email,
+    });
 
-    const data = await res.json()
-    console.log('Email sent successfully:', data)
+    console.log('Email sent successfully:', emailResponse)
 
-    return new Response(JSON.stringify(data), {
+    return new Response(JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       status: 200,
     })

@@ -36,13 +36,12 @@ const Navbar = () => {
             <Link to="/about" className="text-text-light hover:text-text transition-colors">
               {t.nav.about}
             </Link>
-            <Link to="/products" className="text-text-light hover:text-text transition-colors">
+            <Link to="/categories" className="text-text-light hover:text-text transition-colors">
               {t.nav.products}
             </Link>
             <Link to="/contact" className="text-text-light hover:text-text transition-colors">
               {t.nav.contact}
             </Link>
-            {/* Partner with Us button temporarily hidden */}
             
             {/* Language Selector */}
             <DropdownMenu>
@@ -91,7 +90,7 @@ const Navbar = () => {
                 {t.nav.about}
               </Link>
               <Link
-                to="/products"
+                to="/categories"
                 className="block px-3 py-2 text-text-light hover:text-text transition-colors"
                 onClick={toggleMenu}
               >
@@ -104,7 +103,6 @@ const Navbar = () => {
               >
                 {t.nav.contact}
               </Link>
-              {/* Partner with Us button temporarily hidden */}
               
               {/* Mobile Language Selector */}
               <div className="px-3 py-2">

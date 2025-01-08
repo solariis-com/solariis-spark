@@ -41,7 +41,7 @@ export const translations = {
     hero: {
       title: "Elevating Beauty Standards",
       subtitle: "One Brand at a Time",
-      description: "Gain exclusive access to high-quality, vetted international brands in the health and beauty industry. We provide reliable supply chains, competitive wholesale pricing, and marketing support for retailers and resellers.",
+      description: "We partner with exceptional health and beauty brands to adapt and successfully penetrate the Venezuelan market. From regulatory compliance to distribution and marketing, we ensure a seamless market entry and sustainable growth.",
       cta: {
         partner: "Partner with Us",
         learnMore: "Learn More"

@@ -4,7 +4,7 @@ import { translations } from "../translations";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Leaf, ShoppingBag, BarChart3, ShieldCheck } from "lucide-react";
+import { CheckCircle2, Leaf, ShoppingBag, ShieldCheck, Truck } from "lucide-react";
 
 const About = () => {
   const { language } = useLanguage();

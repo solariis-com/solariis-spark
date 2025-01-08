@@ -14,7 +14,7 @@ const Contact = () => {
       <Navbar />
       <div className="pt-24">
         {/* Hero Section */}
-        <div className="relative h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh] mb-16">
+        <div className="relative h-screen mb-16">
           <div className="absolute inset-0 bg-neutral-brown/30 z-10" />
           <img
             src="/lovable-uploads/bc578a58-dea8-4c91-9ac8-423c5d6b3ca4.png"

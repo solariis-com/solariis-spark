@@ -109,7 +109,7 @@ const Categories = () => {
     <>
       <Navbar />
       {/* Hero Section */}
-      <section className="relative h-[50vh] md:h-[80vh] flex items-center justify-center overflow-hidden pt-24">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden pt-24">
         <div 
           className="absolute inset-0 z-0"
           style={{

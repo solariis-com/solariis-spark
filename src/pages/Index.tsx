@@ -33,7 +33,7 @@ const Index = () => {
       title: "Beauty Tools",
       description: "Innovative beauty tools and accessories for enhanced skincare routines.",
       items: ["Facial Rollers", "LED Devices", "Styling Tools", "Applicators"],
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b"
+      image: "/lovable-uploads/0a139b6f-dba1-4876-b44b-e617cf574783.png"
     },
     {
       title: "Eco-Friendly Beauty",

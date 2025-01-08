@@ -80,11 +80,6 @@ const Footer = () => {
             <div className="flex items-end">
               <img src={LogoSvg} alt="Solariis Logo" className="w-32 h-auto" />
             </div>
-            <div className="flex items-end">
-              <p className="text-text-light">
-                Live Radiantly;
-              </p>
-            </div>
           </div>
           <p className="text-center text-text-light text-body-sm">
             © 2025 Solariis Venezuela C.A. All rights reserved.

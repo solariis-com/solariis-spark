@@ -1,4 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 import { ContactForm } from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";

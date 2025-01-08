@@ -3,10 +3,42 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 import LogoSvg from "../assets/logo.svg";
+import { useState, FormEvent } from "react";
 
 const Footer = () => {
   const { language } = useLanguage();
   const t = translations[language];
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setError("");
+
+    // Basic validation
+    if (!email || !password) {
+      setError("Please fill in all fields");
+      return;
+    }
+
+    if (!email.includes("@")) {
+      setError("Please enter a valid email address");
+      return;
+    }
+
+    // Here you would typically make your authentication call
+    try {
+      // For now, just log the attempt
+      console.log("Login attempt with:", { email });
+      // Clear form after submission
+      setEmail("");
+      setPassword("");
+    } catch (err) {
+      setError("An error occurred during login");
+      console.error(err);
+    }
+  };
 
   return (
     <footer className="bg-accent mt-20">
@@ -59,15 +91,22 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold text-text">Distributor Login</h4>
             <p className="text-text-light">Access your distributor or reseller account</p>
-            <form className="space-y-2">
+            {error && (
+              <p className="text-red-500 text-sm">{error}</p>
+            )}
+            <form onSubmit={handleSubmit} className="space-y-2">
               <input
                 type="email"
                 placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <input
                 type="password"
                 placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <button

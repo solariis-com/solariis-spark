@@ -21,25 +21,25 @@ const Index = () => {
       title: "Wellness & Self-Care",
       description: "Holistic wellness solutions for mind, body, and soul.",
       items: ["Body Care", "Essential Oils", "Supplements", "Relaxation Aids"],
-      image: "/lovable-uploads/155c6468-35b5-4634-8373-7773f66155f6.png"
+      image: "/lovable-uploads/432c0ff8-3f4f-4199-a36a-8d63f851bd8a.png"
     },
     {
       title: "Makeup & Beauty",
       description: "Essential beauty products for a flawless, natural look.",
       items: ["BB & CC Creams", "Primers", "Lip Care", "Eye Care"],
-      image: "/lovable-uploads/e73ca626-bf75-4f5a-9de8-ab99488f9314.png"
+      image: "/lovable-uploads/bc578a58-dea8-4c91-9ac8-423c5d6b3ca4.png"
     },
     {
       title: "Beauty Tools",
       description: "Innovative beauty tools and accessories for enhanced skincare routines.",
       items: ["Facial Rollers", "LED Devices", "Styling Tools", "Applicators"],
-      image: "/lovable-uploads/27a9a225-a69a-4c50-b4d4-474511d0a173.png"
+      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b"
     },
     {
       title: "Eco-Friendly Beauty",
       description: "Sustainable and environmentally conscious beauty solutions.",
       items: ["Organic Products", "Zero-Waste", "Cruelty-Free", "Clean Beauty"],
-      image: "/lovable-uploads/483723ee-0cd8-4e0c-b235-d8a5e1dec71f.png"
+      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b"
     }
   ];
 

@@ -25,14 +25,6 @@ const Index = () => {
     {
       key: "makeup",
       image: "/lovable-uploads/bc578a58-dea8-4c91-9ac8-423c5d6b3ca4.png"
-    },
-    {
-      key: "tools",
-      image: "/lovable-uploads/0a139b6f-dba1-4876-b44b-e617cf574783.png"
-    },
-    {
-      key: "eco",
-      image: "/lovable-uploads/66557a14-680c-4358-bc47-6f9ab21bb0a6.png"
     }
   ];
 

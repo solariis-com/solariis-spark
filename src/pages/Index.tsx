@@ -14,7 +14,7 @@ const Index = () => {
       title: "Haircare",
       description: "Professional haircare products for all hair types and concerns.",
       items: ["Shampoos & Conditioners", "Hair Masks", "Oils & Serums", "Styling Products"],
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07"
+      image: "/lovable-uploads/98af4ef5-abb3-49be-b3b8-f7d69d917f30.png"
     },
     {
       title: "Wellness & Self-Care",

@@ -33,7 +33,7 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden pt-24">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden pt-24">
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center flex items-center justify-center"
           style={{

@@ -140,7 +140,7 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-gray-200">
           <div className="flex justify-center space-x-4 mb-4">
             <div className="flex items-end">
-              <img src={LogoSvg} alt="Solariis Logo" className="w-32 h-auto" />
+              <img src={LogoSvg} alt="Solariis Logo" className="w-36 h-auto" />
             </div>
           </div>
           <p className="text-center text-text-light text-body-sm">

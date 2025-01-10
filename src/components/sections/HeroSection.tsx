@@ -33,12 +33,6 @@ const HeroSection = () => {
             >
               {t.hero.cta.partner}
             </Link>
-            <Link
-              to="/about"
-              className="inline-block bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 text-button font-semibold"
-            >
-              {t.hero.cta.learnMore}
-            </Link>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center h-full">
-        <div className="animate-fade-up space-y-8 max-w-4xl">
+        <div className="animate-fade-up space-y-8 max-w-4xl text-center">
           <h1 className="font-heading text-display text-white mb-6 leading-tight">
             {t.hero.title} <span className="text-primary">{t.hero.subtitle}</span>
           </h1>

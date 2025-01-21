@@ -91,7 +91,7 @@ const Footer = () => {
                   WhatsApp
                 </a>
               </li>
-              <li className="flex items-center space-x-2 text-text-light">
+              {/* <li className="flex items-center space-x-2 text-text-light">
                 <MessageSquare size={16} />
                 <a 
                   href="https://t.me/solariis" 
@@ -101,7 +101,7 @@ const Footer = () => {
                 >
                   Telegram
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 

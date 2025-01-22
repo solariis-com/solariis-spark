@@ -55,6 +55,73 @@ export const es = {
       title: "Envíanos un Mensaje"
     }
   },
+  about: {
+    hero: {
+      title: "Llevando Bienestar y Belleza Global a Ti",
+      description: "Solariis está dedicada a introducir y comercializar marcas premium de salud, bienestar y belleza en Venezuela."
+    },
+    whoWeAre: {
+      title: "Quiénes Somos",
+      description: "Solariis es una empresa comprometida con la importación, representación y comercialización de marcas premium en las industrias de salud, bienestar y belleza. Nuestro objetivo es conectar marcas globales con el mercado venezolano, asegurando el acceso a productos innovadores de alta calidad."
+    },
+    mission: {
+      title: "Nuestra Misión",
+      description: "En Solariis, creemos en empoderar a los consumidores con productos de bienestar y belleza confiables y de alta calidad. Nuestra misión es introducir y posicionar estratégicamente marcas internacionales, asegurando una penetración exitosa en el mercado mientras mantenemos la integridad y el valor de cada marca que representamos."
+    },
+    vision: {
+      title: "Nuestra Visión",
+      description: "Aspiramos a establecer a Solariis como un actor clave en la industria de la belleza y el bienestar, construyendo relaciones a largo plazo con marcas internacionales, minoristas y consumidores, mientras mantenemos la excelencia y confiabilidad en la distribución."
+    },
+    whatWeDo: {
+      title: "Qué Hacemos",
+      items: {
+        brandRepresentation: {
+          title: "Representación de Marcas y Expansión de Mercado",
+          description: "Actuamos como representantes oficiales de marcas internacionales de belleza y bienestar."
+        },
+        importDistribution: {
+          title: "Importación y Distribución",
+          description: "Traemos productos de alta calidad a cadenas minoristas confiables, farmacias y plataformas de comercio electrónico."
+        },
+        marketing: {
+          title: "Marketing y Reconocimiento de Marca",
+          description: "Desarrollamos estrategias localizadas, marketing digital y activaciones minoristas para posicionar marcas efectivamente."
+        },
+        regulatory: {
+          title: "Soporte Regulatorio y de Cumplimiento",
+          description: "Manejamos la logística de importación, registros legales y cumplimiento del mercado local para una entrada fluida de la marca."
+        }
+      }
+    },
+    whyChooseUs: {
+      title: "¿Por Qué Elegir Solariis?",
+      description: "Estamos comprometidos con la construcción de alianzas sólidas y asegurando que las marcas internacionales tengan éxito en el mercado venezolano.",
+      items: [
+        {
+          title: "Red Estratégica de Retail y Distribución",
+          description: "Acceso a minoristas líderes, farmacias y mercados en línea."
+        },
+        {
+          title: "Experiencia Regulatoria y de Cumplimiento",
+          description: "Asegurando una entrada fluida al mercado y adherencia a las regulaciones locales."
+        },
+        {
+          title: "Soporte de Marca y Crecimiento",
+          description: "Desarrollando estrategias de marketing personalizadas para mejorar el reconocimiento de marca y el compromiso del consumidor."
+        },
+        {
+          title: "Compromiso con la Excelencia",
+          description: "Manteniendo altos estándares de calidad y prácticas comerciales éticas en cada alianza."
+        }
+      ]
+    },
+    cta: {
+      title: "Contáctanos",
+      description: "Si eres una marca internacional que busca entrar al mercado venezolano o un minorista interesado en productos premium de belleza y bienestar, nos encantaría conectar.",
+      subtitle: "¡Construyamos algo grandioso juntos!",
+      button: "Contáctanos"
+    }
+  },
   categories: {
     title: "Descubre Nuestras Categorías de Productos",
     description: "En Solariis, traemos productos premium de salud, bienestar y belleza al mercado, cuidadosamente seleccionados para satisfacer las necesidades de consumidores y minoristas.",
